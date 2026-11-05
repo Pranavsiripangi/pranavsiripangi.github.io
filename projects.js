@@ -1,0 +1,13 @@
+/* EDIT HERE: the single list of projects, shared by the homepage and every case-study page.
+   Order here = order of cards, viewer filmstrip, "01 / 04" positions, and the "next" link chain.
+   - id       must match data-project / data-open in index.html
+   - caseUrl  file name of the case-study page ('' hides the link)
+   - label    honest one-line status shown in the viewer, e.g. 'Prototype · synthetic data'
+   - demo     optional; 'pulse' shows the sample interactive dashboard in the viewer
+   Write all visible text (name, label, description, details) in English: the site is lang="en". */
+window.portfolioProjects = [
+  { id: 'kinetix', label: 'Prototype · synthetic data', name: 'Kinetix', caseUrl: 'case-kinetix.html', description: 'A procurement and PPIC workspace that scores suppliers, flags stock-out risk, and tests order splits from a single purchase-order dataset.', details: ['Role: Solo — domain research, data model, backend, UI, testing', 'Stack: Python standard library, vanilla JavaScript, Apache ECharts', 'Status: Synthetic data (120 POs) · 5 backend tests + 14 model checks'] },
+  { id: 'retentionos', label: 'Prototype · synthetic data', name: 'RetentionOS', caseUrl: 'case-retentionos.html', description: 'A churn early-warning engine for B2B broadband: a 60-day risk radar, per-account drivers, and a retention ROI calculator that rejects blind discounting.', details: ['Role: Solo — product spec, gap analysis, model, backend, UI', 'Stack: Python with no dependencies, logistic regression, exact Shapley values', 'Status: Synthetic data (420 accounts) · 85 automated tests'] },
+  { id: 'vera', label: 'Prototype · synthetic data', name: 'Vera', caseUrl: 'case-vera.html', description: 'A three-way match workspace that reconciles purchase orders, delivery notes, and vendor invoices before anything is marked ready to pay.', details: ['Role: Spec review, frontend build, QA', 'Stack: HTML, CSS, JavaScript, IndexedDB, service worker', 'Status: Frontend demo with synthetic fixtures · 13 domain tests'] },
+  { id: 'tiktory', label: 'Prototype · simulated data', name: 'Tiktory', caseUrl: 'case-tiktory.html', description: 'A field-expansion planner for a fiber network: map demand, simulate cost, dispatch a surveyor, and record the manager’s decision with an audit trail.', details: ['Role: Full-stack — backend, map interface, QA', 'Stack: FastAPI, SQLite, Leaflet, vanilla JavaScript', 'Status: Local demo with simulated data · 31 API tests'] }
+];

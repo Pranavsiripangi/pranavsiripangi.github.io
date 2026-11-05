@@ -1,0 +1,49 @@
+/* An editable two-row ticker of the tools used across the portfolio. */
+.logo-marquee{position:relative;isolation:isolate;overflow:hidden;padding:clamp(36px,4vw,56px) 0 clamp(32px,3vw,48px);color:var(--ink)}
+.logo-marquee::before{content:'';position:absolute;inset:8% 0 6%;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(232,248,250,.04),rgba(237,249,250,.48) 46%,rgba(232,248,250,.08))}
+.marquee-heading{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(230px,.85fr);align-items:end;gap:clamp(24px,4vw,64px);padding-block:0 31px;border-top:1px solid var(--line)}
+.marquee-heading>div{padding-top:23px}
+.marquee-kicker,.marquee-end{font:11px/1.4 var(--mono);letter-spacing:.075em;text-transform:uppercase}
+.marquee-kicker{color:var(--orange)}
+.marquee-heading h2{margin:15px 0 0;font-size:clamp(32px,3.5vw,52px);line-height:1.03;letter-spacing:-.045em;font-weight:800}
+.marquee-heading p{margin:0 0 6px;max-width:28ch;font-size:clamp(16px,1.45vw,20px);line-height:1.4}
+.marquee-window{position:relative;width:100%;overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent)}
+.marquee-window:not(.marquee-window--reverse){border-top:1px solid rgba(21,44,62,.21)}
+.marquee-window--reverse{border-top:1px solid rgba(21,44,62,.21);border-bottom:1px solid rgba(21,44,62,.21)}
+.marquee-track{display:flex;width:max-content;align-items:center}
+.marquee-group{display:flex;flex:none;width:max-content;align-items:center;gap:clamp(40px,4vw,64px);padding-right:clamp(40px,4vw,64px)}
+.marquee-window:not(.marquee-window--reverse) .marquee-group{min-height:88px}
+.marquee-window--reverse .marquee-group{min-height:80px}
+.marquee-tool{display:inline-flex;align-items:center;gap:15px;flex:none;white-space:nowrap;color:var(--ink);font:700 clamp(20px,1.8vw,26px)/1.1 var(--sans);letter-spacing:-.035em}
+.marquee-tool img{display:block;flex:none;width:36px;height:36px;object-fit:contain}
+.marquee-tool--wordmark{font-size:clamp(24px,2.2vw,32px);font-weight:800;letter-spacing:-.055em}
+.marquee-end{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;color:var(--muted)}
+.logo-marquee.is-ready .marquee-track{animation:marquee-forward var(--marquee-duration,38s) linear infinite;animation-play-state:paused}
+.logo-marquee.is-ready .marquee-window--reverse .marquee-track{animation-name:marquee-reverse}
+.logo-marquee.is-ready .marquee-window.is-in-view .marquee-track{animation-play-state:running}
+@media(hover:hover){.logo-marquee.is-ready .marquee-window.is-in-view:hover .marquee-track{animation-play-state:paused}}
+@keyframes marquee-forward{from{transform:translate3d(0,0,0)}to{transform:translate3d(var(--marquee-distance,0px),0,0)}}
+@keyframes marquee-reverse{from{transform:translate3d(var(--marquee-distance,0px),0,0)}to{transform:translate3d(0,0,0)}}
+@media(max-width:700px){
+  .logo-marquee{padding-block:40px 44px}
+  .marquee-heading{grid-template-columns:1fr;gap:18px;padding-bottom:26px}
+  .marquee-heading h2{margin-top:12px;font-size:clamp(32px,8vw,44px)}
+  .marquee-heading p{max-width:24ch;font-size:15px;margin:0}
+  .marquee-window:not(.marquee-window--reverse) .marquee-group{min-height:96px}
+  .marquee-window--reverse .marquee-group{min-height:88px}
+  .marquee-group{gap:54px;padding-right:54px}
+  .marquee-tool{gap:11px;font-size:23px}
+  .marquee-tool img{width:36px;height:36px}
+  .marquee-tool--wordmark{font-size:29px}
+  .marquee-end{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+  .logo-marquee .marquee-track{width:100%;animation:none!important;transform:none!important}
+  .logo-marquee .marquee-group{width:100%;min-height:0!important;flex-wrap:wrap;justify-content:center;gap:24px 32px;padding:24px var(--gutter)}
+  .logo-marquee .marquee-group[aria-hidden="true"],.logo-marquee .marquee-group>[aria-hidden="true"]{display:none}
+  .logo-marquee .marquee-window{mask-image:none;-webkit-mask-image:none}
+  .marquee-tool{font-size:clamp(20px,2.4vw,28px)}
+  .marquee-tool img{width:34px;height:34px}
+  .marquee-tool--wordmark{font-size:clamp(25px,3vw,34px)}
+}
+@media(forced-colors:active){.logo-marquee::before{display:none}.marquee-window{mask-image:none;-webkit-mask-image:none}}

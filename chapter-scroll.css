@@ -1,0 +1,182 @@
+/* Scroll chapters share one physical clock: the browser's native scroll position. */
+body::before{
+  background-image:linear-gradient(var(--water-depth-tint,rgba(8,32,50,0)),var(--water-depth-tint,rgba(8,32,50,0))),linear-gradient(rgba(221,243,248,.39),rgba(221,243,248,.39)),url('assets/water-caustics.jpg');
+}
+body::after{filter:brightness(var(--water-light,1))}
+@media(max-width:700px){body::before{background-image:linear-gradient(var(--water-depth-tint,rgba(8,32,50,0)),var(--water-depth-tint,rgba(8,32,50,0))),linear-gradient(rgba(231,247,250,.49),rgba(231,247,250,.49)),url('assets/water-caustics.jpg')}}
+
+/* A visual index gives the Work section a purpose without adding another card. */
+.work-progress{display:flex;align-items:center;gap:12px;margin:-8px 0 20px;color:#27465a;font:500 12px/1.5 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.work-progress>span:first-child{min-width:2ch;color:#a83e1d;font-size:15px}
+.work-progress-rule{height:1px;width:clamp(32px,7vw,96px);background:currentColor;opacity:.55}
+
+/* The center opens with the visitor's scroll; blur remains inside the photo. */
+body.chapter-scroll-active .project-card .project-art{
+  opacity:1;
+  clip-path:inset(0 calc((1 - var(--art-open,0)) * 50%) 0 calc((1 - var(--art-open,0)) * 50%) round 3px);
+  transition:none;
+}
+body.chapter-scroll-active .project-card .project-art .project-image{
+  filter:blur(calc((1 - var(--art-open,0)) * 9px));
+  transition:transform 700ms var(--ease-out);
+}
+/* Bottom-right: landing-page covers keep their call-to-action buttons bottom-left. On hover/focus the
+   pill gives way to the "View project" label, which sits in the same corner. */
+.project-handoff{position:absolute;right:clamp(10px,2vw,24px);bottom:clamp(8px,1.6vw,20px);transition:opacity 200ms ease;display:flex;align-items:center;gap:8px;max-width:calc(100% - 40px);padding:5px 12px 5px 4px;border:1px solid rgba(255,255,255,.7);border-radius:999px;background:rgba(240,249,247,.9);box-shadow:0 8px 20px rgba(0,0,0,.15);color:#163448;font:500 clamp(11px,.85vw,13px)/1.2 var(--mono);white-space:nowrap;pointer-events:none;opacity:clamp(0,calc((var(--art-open,0) - .55) * 2.4),1);transform:translateX(calc((1 - var(--art-open,0)) * 24px))}
+@media(hover:hover){.project-open:hover .project-handoff{opacity:0}}
+.project-open:focus-visible .project-handoff{opacity:0}
+.project-handoff img{width:34px;height:47px;object-fit:contain;image-rendering:pixelated;flex:none}
+
+/* A held breath between the making and the maker. */
+.breath-chapter{position:relative;height:180svh;min-height:900px;isolation:isolate}
+.breath-sticky{position:sticky;top:0;min-height:100svh;display:grid;align-items:center}
+.breath-inner{display:grid;grid-template-columns:minmax(0,1fr) clamp(72px,9vw,130px);grid-template-rows:auto 1fr auto;gap:30px;align-items:center;min-height:min(100svh,1000px);padding-top:clamp(110px,12vh,160px);padding-bottom:clamp(55px,9vh,110px)}
+.breath-eyebrow,.breath-end{font:500 12px/1.5 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:#294c60}
+.breath-eyebrow{grid-column:1/-1;border-top:1px solid rgba(21,44,62,.28);padding-top:15px;max-width:42ch}
+.breath-inner h2{max-width:11ch;margin:0;font-size:clamp(60px,10.5vw,162px);font-weight:800;line-height:.94;letter-spacing:-.045em;text-wrap:balance}
+.breath-inner h2 span{display:block;padding-block:.06em;margin-block:-.06em;color:#18384c}
+.breath-inner h2 .breath-word{display:inline-block;padding:0;margin:0;white-space:nowrap;color:inherit}
+.breath-inner h2 .breath-letter{display:inline;padding:0;margin:0;color:#18384c}
+.breath-inner h2 .breath-letter.is-inked{color:#a83e1d}
+.breath-drift{position:relative;justify-self:center;align-self:center;width:clamp(72px,9vw,130px);height:210px;transform:translateY(calc(var(--breath-progress,0) * -16px))}
+.breath-drift img{position:absolute;width:clamp(48px,5vw,70px);height:auto;left:20%;bottom:0;image-rendering:pixelated;filter:drop-shadow(0 13px 7px rgba(15,42,55,.16))}
+.breath-bubble{position:absolute;display:block;border:1.5px solid rgba(26,77,96,.7);border-radius:50%;background:rgba(226,247,248,.12);box-shadow:inset -3px -4px 0 rgba(34,110,130,.08)}
+.breath-bubble--one{width:25px;height:25px;left:18%;top:12%}.breath-bubble--two{width:14px;height:14px;right:14%;top:30%}.breath-bubble--three{width:9px;height:9px;left:30%;top:43%}
+.breath-end{grid-column:1/-1;display:flex;align-items:center;gap:20px;justify-content:space-between;border-bottom:1px solid rgba(21,44,62,.28);padding-bottom:16px}
+.breath-tide{flex:1;max-width:280px;height:2px;background:rgba(21,44,62,.2)}
+.breath-tide i{display:block;width:calc(var(--breath-progress,0) * 100%);height:100%;background:#a83e1d}
+
+/* Existing workstation sprites step forward only when their row reaches the reader. */
+body.chapter-scroll-active .services .service-row .service-specialist{opacity:var(--specialist-enter,0);transform:translate3d(calc((1 - var(--specialist-enter,0)) * -18px),calc((1 - var(--specialist-enter,0)) * 8px),0);transition:none}
+body.chapter-scroll-active .services .service-row:is(:hover,:focus-visible) .service-specialist{opacity:1;transform:none}
+body.chapter-scroll-active .services .service-row .service-workbench i{opacity:calc(.55 + var(--specialist-enter,0) * .45)}
+
+/* The whole water surface deepens continuously; section edges carry no wash. */
+body.chapter-scroll-active .services .services-heading h2,body.chapter-scroll-active .process .section-heading h2{color:#f1f8f7}
+body.chapter-scroll-active .services .services-heading>p,body.chapter-scroll-active .process-list,body.chapter-scroll-active .process-list p{color:#e3f0f1}
+/* Light copy over mid-blue water: a soft navy shadow keeps small text legible without a panel. */
+body.chapter-scroll-active .services .services-heading h2,body.chapter-scroll-active .services .services-heading>p,body.chapter-scroll-active .process-heading h2,body.chapter-scroll-active .process-heading>p,body.chapter-scroll-active .process-list h3,body.chapter-scroll-active .process-list p,body.chapter-scroll-active .process-number{text-shadow:0 1px 2px rgba(8,32,50,.45),0 0 14px rgba(8,32,50,.38)}
+
+/* The route stays in view for four readable beats. The moving bead is its physical edge. */
+.process.section-space{height:360svh;min-height:0;padding:0;scroll-margin-top:0}
+.process-sticky{position:sticky;top:0;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:clamp(112px,14svh,166px);padding-bottom:clamp(42px,8svh,88px);isolation:isolate}
+/* A local caustic layer becomes visible inside the held chapter, then recedes before either edge. */
+.process-water-surface{position:absolute;top:0;bottom:0;left:calc((100% - 100vw)/2);width:100vw;z-index:0;overflow:clip;pointer-events:none}
+.process-water-surface::before,.process-water-surface::after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(180deg,transparent,#000 15%,#000 85%,transparent)}
+.process-water-surface::before{background:url('assets/water-caustics.jpg') center/cover no-repeat;mix-blend-mode:screen;opacity:calc(var(--process-water-strength,0) * .38);transform:translate3d(var(--process-water-x,0px),var(--process-water-y,0px),0) scale(1.12)}
+.process-water-surface::after{background:radial-gradient(ellipse 34% 28% at 22% 42%,rgba(195,239,242,.24),transparent 80%),radial-gradient(ellipse 32% 25% at 76% 66%,rgba(124,210,225,.2),transparent 83%);opacity:calc(var(--process-water-strength,0) * .75);transform:translate3d(calc(var(--process-water-x,0px) * -.5),calc(var(--process-water-y,0px) * -.5),0)}
+.process-sticky>.process-heading,.process-sticky>.process-route{position:relative;z-index:1}
+.process-heading{display:flex;align-items:end;justify-content:space-between;gap:32px;max-width:none!important;margin-bottom:clamp(40px,5vw,72px)!important}
+.process-heading>p{max-width:27ch;font-size:clamp(16px,1.3vw,19px)}
+body.chapter-scroll-active .process-heading>p{color:#e3f0f1}
+.process-kicker,.faq-kicker{display:block;margin-bottom:16px;font:500 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.process-kicker{color:#89391e}body.chapter-scroll-active .process-kicker,.faq-kicker{color:#e4ad7c}
+.process-route{position:relative;--rail-start:0px;--rail-cross:0px;--rail-length:75%}
+.process-rail{position:absolute;z-index:0;left:var(--rail-start);top:var(--rail-cross);width:var(--rail-length);height:2px;background:rgba(228,240,241,.36);pointer-events:none}
+.process-rail-fill{position:absolute;inset:0;transform-origin:left center;transform:scaleX(var(--process-visual-progress));background:linear-gradient(90deg,#bc7651 0%,#e4ad7c 76%,#f6d4ad 100%)}
+.process-bead{position:absolute;z-index:1;left:calc(var(--process-visual-progress) * 100%);top:50%;width:10px;height:10px;border:1px solid rgba(255,255,255,.8);border-radius:50%;background:#f6d4ad;transform:translate(-50%,-50%) scale(var(--process-bead-scale,0));box-shadow:0 0 0 3px rgba(13,44,61,.32)}
+.process-list{position:relative;z-index:1;border:0;gap:clamp(18px,2.4vw,36px)}
+.process-list li{position:relative;padding-top:clamp(42px,3.5vw,54px);min-width:0;border:0!important;opacity:.92;transition:opacity 300ms ease}
+.process-list li:nth-child(even){padding-top:clamp(57px,5vw,77px)}
+.process-list li.is-current{opacity:1}
+.process-list li.is-arrived:not(.is-current){opacity:1}
+/* Each stop is a small water lens. The fall, compression and waves share one impact beat. */
+.process-node{position:absolute;z-index:2;left:0;top:0;width:24px;height:24px;transform:translate(-50%,-50%);border:2px solid #d9eced;border-radius:50%;background:linear-gradient(145deg,#4b7588,#183d51 72%);box-shadow:inset 0 1px 2px rgba(255,255,255,.35),0 3px 7px rgba(0,0,0,.2);pointer-events:none}
+.process-node::after{content:'';position:absolute;inset:2px 3px auto;height:5px;border-radius:50%;background:rgba(242,255,255,.65);transform:rotate(-25deg);pointer-events:none}
+.process-node-core{position:absolute;inset:4px;border-radius:50%;background:radial-gradient(circle at 35% 28%,#fff2dc,#e4ad7c 64%);opacity:0;transform:scale(.4);transition:opacity 220ms ease,transform 460ms cubic-bezier(.18,1,.32,1)}
+.process-node-halo{position:absolute;z-index:-1;inset:-19px;border-radius:50%;background:radial-gradient(circle,rgba(228,249,248,.36) 0,rgba(228,249,248,.14) 40%,transparent 72%);opacity:0;transform:scale(.6);transition:opacity 480ms ease,transform 800ms cubic-bezier(.18,.75,.2,1)}
+.process-list li.is-arrived .process-node{animation:process-node-impact 880ms 440ms ease-out both}
+.process-list li.is-arrived .process-node-core{opacity:1;transform:scale(1);animation:process-impact 880ms 440ms ease-out both}
+.process-list li.is-arrived .process-node-halo{opacity:1;transform:scale(1)}
+.process-drop{position:absolute;left:50%;top:-36px;width:10px;height:14px;border-radius:55% 55% 65% 65%;background:linear-gradient(120deg,#f1ffff,#8ac8d3);opacity:0;transform:translate(-50%,-12px) scale(.7);box-shadow:inset 1px 1px 1px rgba(255,255,255,.8)}
+.process-ripple{position:absolute;z-index:-1;left:50%;top:50%;width:24px;height:24px;border:.75px solid rgba(218,251,251,.9);border-radius:50%;opacity:0;transform:translate(-50%,-50%) scale(.65);box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.process-water-wave{position:absolute;z-index:-2;left:50%;top:50%;width:76px;height:52px;border-radius:50%;background:url('assets/water-caustics.jpg') 55% 45%/180px 120px;mask-image:radial-gradient(ellipse,#000 15%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse,#000 15%,transparent 70%);mix-blend-mode:screen;opacity:0;transform:translate(-50%,-50%) scale(.25)}
+.process-splash{position:absolute;z-index:3;left:50%;top:50%;width:46px;height:30px;background:radial-gradient(circle at 8% 55%,#d5eff0 0 2px,transparent 2.7px),radial-gradient(circle at 28% 16%,#e8ffff 0 1.5px,transparent 2.2px),radial-gradient(circle at 72% 16%,#e8ffff 0 1.5px,transparent 2.2px),radial-gradient(circle at 92% 55%,#d5eff0 0 2px,transparent 2.7px);opacity:0;transform:translate(-50%,-50%) scale(.4)}
+.process-list li.is-arrived .process-drop{animation:process-drop 720ms cubic-bezier(.3,.15,.55,1) both}
+.process-list li.is-arrived .process-ripple--one{animation:process-ripple 1600ms 440ms cubic-bezier(.12,.55,.22,1) both}
+.process-list li.is-arrived .process-ripple--two{animation:process-ripple 1800ms 650ms cubic-bezier(.12,.55,.22,1) both}
+.process-list li.is-arrived .process-ripple--three{animation:process-ripple 2000ms 880ms cubic-bezier(.12,.55,.22,1) both}
+.process-list li.is-arrived .process-water-wave{animation:process-water-wave 2100ms 440ms ease-out both}
+.process-list li.is-arrived .process-splash{animation:process-splash 640ms 440ms ease-out both}
+@keyframes process-drop{0%{opacity:0;transform:translate(-50%,-12px) scale(.6)}18%{opacity:1}62%{opacity:1;transform:translate(-50%,39px) scale(.8,1.18)}74%,100%{opacity:0;transform:translate(-50%,43px) scale(1.65,.25)}}
+@keyframes process-node-impact{0%{transform:translate(-50%,-50%) scale(1)}18%{transform:translate(-50%,-50%) scale(1.28,.78)}42%{transform:translate(-50%,-50%) scale(.9,1.12)}68%{transform:translate(-50%,-50%) scale(1.06,.97)}100%{transform:translate(-50%,-50%) scale(1)}}
+@keyframes process-impact{0%{transform:scale(.6)}40%{transform:scale(1.26)}68%{transform:scale(.92)}100%{transform:scale(1)}}
+@keyframes process-ripple{0%{opacity:.95;transform:translate(-50%,-50%) scale(.7)}18%{opacity:.8}65%{opacity:.34}100%{opacity:0;transform:translate(-50%,-50%) scale(6.5,3.5)}}
+@keyframes process-water-wave{0%{opacity:0;transform:translate(-50%,-50%) scale(.25)}15%{opacity:.4}58%{opacity:.2}100%{opacity:0;transform:translate(-50%,-50%) scale(2,1.5)}}
+@keyframes process-splash{0%{opacity:0;transform:translate(-50%,-50%) scale(.4)}20%{opacity:1}60%{opacity:.75;transform:translate(-50%,-90%) scale(1.15)}100%{opacity:0;transform:translate(-50%,-35%) scale(1.3)}}
+.process.is-static .process-list li.is-arrived .process-node,.process.is-static .process-list li.is-arrived .process-node-core{animation:none}
+.process.is-static .process-drop,.process.is-static .process-ripple,.process.is-static .process-water-wave,.process.is-static .process-splash{display:none}
+.process-number{display:block;color:#89391e;font-size:13px;letter-spacing:.06em}
+body.chapter-scroll-active .process-number{color:#fbe3c6}
+.process-list h3{margin:11px 0 10px;font-size:clamp(24px,2.4vw,36px)}
+body.chapter-scroll-active .process-list h3{color:#f1f8f7}
+.process-list p{max-width:24ch;margin:0;font-size:clamp(15px,1.15vw,17px);line-height:1.55}
+
+/* The briefing is a lit instrument inside the deep water. */
+.faq>.page-width{position:relative;overflow:hidden;align-items:start;padding:clamp(30px,4vw,58px);border:1px solid rgba(213,240,240,.35);border-radius:clamp(26px,3vw,42px);background:rgba(7,29,44,.88);color:#f1f8f7;box-shadow:0 24px 64px rgba(0,0,0,.17),inset 0 1px 0 rgba(255,255,255,.14);-webkit-backdrop-filter:blur(16px) saturate(1.1);backdrop-filter:blur(16px) saturate(1.1)}
+.faq>.page-width::before{content:'';position:absolute;inset:-35% -12% auto auto;width:58%;height:78%;border-radius:50%;background:radial-gradient(ellipse,rgba(86,157,168,.17),transparent 72%);pointer-events:none}
+.faq .faq-intro,.faq .faq-list{position:relative;z-index:1}
+.faq .faq-intro h2{color:#f1f8f7;font-size:clamp(34px,3.4vw,52px)}
+.faq .faq-intro .faq-lead{color:#d2e5e7;max-width:23ch;margin-top:24px}
+.faq .faq-contact-link{color:#f4c28a;text-decoration:none;border-bottom:1px solid rgba(244,194,138,.7);padding-bottom:4px;gap:12px}
+.faq .faq-contact-link:hover{color:#fff0d7}
+.faq .faq-list{counter-reset:faq;border-top:1px solid rgba(225,244,244,.34)}
+.faq details{counter-increment:faq;border-bottom:1px solid rgba(225,244,244,.34)}
+.faq details::before{background:rgba(155,207,214,.1);inset:4px -14px}
+.faq summary{color:#f1f8f7;gap:18px}
+.faq summary::before{content:'0' counter(faq);flex:none;width:32px;color:#f4c28a;font:500 12px/1.4 var(--mono);letter-spacing:.05em}
+.faq-question{flex:1}
+.faq summary .faq-icon,.faq summary:hover .faq-icon,.faq details.is-expanded .faq-icon{border-color:rgba(225,244,244,.43);background:rgba(225,244,244,.1);color:#f1f8f7}
+.faq details.is-expanded .faq-icon{color:#f4c28a;border-color:rgba(244,194,138,.65)}
+.faq .faq-answer-inner p{color:#d2e5e7;margin-left:50px}
+.faq .faq-answer-inner a{color:#f4c28a}
+.faq summary:focus-visible{outline-color:#f4c28a}
+
+/* The footer is the seafloor; the pixel street stays legible as a lit diorama. */
+.contact{background:linear-gradient(160deg,#225169 0%,#103549 54%,#091f30 100%);border-color:rgba(235,249,250,.35);color:#f1f8f7;box-shadow:0 22px 60px rgba(0,0,0,.19),inset 0 1px 0 rgba(255,255,255,.25)}
+.contact::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 58% at 50% 77%,rgba(127,201,202,.42),transparent 75%);opacity:calc(.08 + var(--footer-depth,0) * .38)}
+.contact>.page-width{position:relative;z-index:1}
+.contact-context{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.contact .contact-availability,.contact-depth-label{color:#d3e7eb;font-size:12px}
+.contact-depth-label{font-family:var(--mono);letter-spacing:.05em}
+.contact .footer-line{border-top-color:rgba(235,249,250,.4)}
+.contact .contact-email:focus-visible,.contact .back-top:focus-visible{outline-color:#f4c17b}
+.contact .pixel-stage{border-color:rgba(235,249,250,.55);background-image:linear-gradient(180deg,rgba(11,42,57,.33),rgba(11,42,57,.04) 70%),url('assets/pixel-waterfront.svg');box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 14px 38px rgba(0,0,0,.14)}
+
+@media(max-width:900px){
+  .process-heading{display:block}.process-heading>p{margin-top:20px;max-width:36ch}
+  .process-sticky{padding-top:clamp(105px,14svh,150px);padding-bottom:42px}
+  .process-heading{margin-bottom:28px!important}
+  .process-rail{width:2px;height:var(--rail-length)}
+  .process-rail-fill{transform-origin:center top;transform:scaleY(var(--process-visual-progress));background:linear-gradient(180deg,#bc7651,#e4ad7c 76%,#f6d4ad)}
+  .process-bead{left:50%;top:calc(var(--process-visual-progress) * 100%)}
+  .process-list{grid-template-columns:1fr;gap:0;padding-left:24px}
+  .process-list li,.process-list li:nth-child(even){padding:0 0 clamp(20px,3svh,28px) 16px;border:0}
+  .process-list li:last-child{padding-bottom:0}.process-node{left:-24px;top:8px}
+  .process-drop{left:-36px;top:50%;transform:translate(-12px,-50%) rotate(-90deg)}
+  .process-list li.is-arrived .process-drop{animation-name:process-drop-side}
+  @keyframes process-drop-side{0%{opacity:0;transform:translate(-12px,-50%) rotate(-90deg) scale(.6)}18%{opacity:1}62%{opacity:1;transform:translate(39px,-50%) rotate(-90deg) scale(.8,1.18)}74%,100%{opacity:0;transform:translate(43px,-50%) rotate(-90deg) scale(1.65,.25)}}
+  .process-ripple{width:20px;height:20px}
+  .process-water-wave{width:60px;height:46px}
+  @keyframes process-ripple{0%{opacity:.95;transform:translate(-50%,-50%) scale(.7)}18%{opacity:.8}65%{opacity:.34}100%{opacity:0;transform:translate(-50%,-50%) scale(4.6)}}
+  .process-list p{max-width:45ch}
+}
+@media(max-width:700px){
+  .breath-chapter{height:145svh;min-height:660px}.breath-inner{grid-template-columns:1fr;padding-top:100px;padding-bottom:55px}.breath-inner h2{font-size:clamp(51px,13vw,84px)}.breath-drift{display:none}.breath-end{gap:12px;flex-wrap:wrap}.breath-end span:last-child{margin-left:auto}.breath-tide{min-width:48px}.project-handoff{padding-right:9px;font-size:11px}.project-handoff img{width:26px;height:36px}.contact-depth-label{font-size:11px;text-align:right}
+  .faq>.page-width{padding:28px 24px}.faq .faq-intro .faq-lead{max-width:36ch}.faq .faq-list{margin-top:10px}.faq .faq-answer-inner p{margin-left:0}
+  .process-heading h2{font-size:clamp(36px,10vw,52px)}.process-list h3{font-size:clamp(21px,6vw,27px);margin:4px 0 4px}.process-list p{font-size:clamp(13px,3.6vw,15px);line-height:1.42}.process-number{font-size:11px}
+}
+@media(max-height:620px) and (max-width:900px){.process.section-space{height:auto;padding-block:54px}.process-sticky{position:relative;min-height:0;padding-top:0;padding-bottom:0}.process-list li{opacity:1}.process-rail-fill{transform:scaleY(1)}.process-bead{display:none}}
+@media(hover:none){body.chapter-scroll-active .services .service-row .service-specialist{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){
+  .breath-chapter{height:auto;min-height:0}.breath-sticky{position:relative;min-height:0}.breath-inner{min-height:0;padding-block:90px}.breath-inner h2 .breath-letter{color:#a83e1d!important}
+  body.chapter-scroll-active .project-card .project-art{clip-path:none!important;opacity:1!important}
+  body.chapter-scroll-active .project-card .project-art .project-image{filter:none!important}
+  body.chapter-scroll-active .services .service-row .service-specialist{opacity:1;transform:none}
+  .project-handoff{opacity:1;transform:none}
+  .breath-drift{transform:none}.process.section-space{height:auto;padding-block:var(--section-space)}.process-sticky{position:relative;min-height:0;padding-block:0}.process-water-surface::before{opacity:.2;transform:none}.process-water-surface::after{opacity:.16;transform:none}.process-list li{opacity:1;transform:none;transition:none}.process-rail-fill{transform:scaleX(1)}.process-bead,.process-drop,.process-ripple,.process-node-halo,.process-water-wave,.process-splash{display:none}.process-list li.is-arrived .process-node{animation:none}.process-node-core,.process-list li.is-arrived .process-node-core{opacity:1;transform:none;transition:none;animation:none}.contact::before{opacity:.25}
+}
+@media(prefers-reduced-motion:reduce) and (max-width:900px){.process-rail-fill{transform:scaleY(1)}}
+@media(prefers-reduced-transparency:reduce){.faq>.page-width{background:#102d3d;-webkit-backdrop-filter:none;backdrop-filter:none}}
+@media(forced-colors:active){.breath-chapter{height:auto;min-height:0}.breath-sticky{position:relative}.breath-inner h2 .breath-letter{color:CanvasText!important}.project-handoff,.process-water-surface::before,.process-water-surface::after{display:none}.faq>.page-width,.contact{background:Canvas;color:CanvasText}.faq .faq-intro h2,.faq summary,.faq .faq-intro .faq-lead,.faq .faq-answer-inner p{color:CanvasText}.contact::before{display:none}}
+.hero-summary small{display:inline-block;margin-top:.7rem;font:500 14px/1.45 var(--mono);letter-spacing:0;color:var(--ink)}

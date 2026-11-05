@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 100" shape-rendering="crispEdges" aria-hidden="true">
+  <!-- A small waterfront block, drawn on a deliberately coarse pixel grid. -->
+  <path fill="#b7dce4" d="M0 0h600v100H0z"/>
+  <path fill="#d4e9e8" d="M0 0h600v20H0z"/>
+  <path fill="#c8e3e5" d="M0 20h600v24H0z"/>
+  <path fill="#e6f1e8" d="M28 13h10V9h18v4h14v5H28zm420 6h12v-5h24v-4h22v5h18v7h-76zM92 7h12V4h15v4h12v5H92z"/>
+  <path fill="#ffe2a5" d="M121 16h10v-4h9v11h-19z"/>
+  <path fill="#f6d99e" d="M119 19h3v5h-3zm22-8h3v5h-3z"/>
+
+  <!-- Low real-world skyline, kept quiet behind the foreground shops. -->
+  <path fill="#8cb6bc" d="M0 43h24V32h16v7h16V29h23v12h18v-8h15v11h18V35h28v11h32v-9h20v9h13V33h18v12h23V36h26v9h23V31h15v15h26v-8h21v9h22V35h18v12h22V31h28v14h17V39h21v7h29V34h19v13h23V40h18v8h25V37h28v9h28v-9h19v10h13V31h21v16h15V40h17v8h24V34h19v14h17v-6h18v17H0z"/>
+  <path fill="#a9c9c6" d="M13 38h4v8h-4zm51-4h4v9h-4zm80 7h4v7h-4zm307-5h4v10h-4zm94 2h4v9h-4z"/>
+  <path fill="#70afbd" d="M0 55h600v21H0z"/>
+  <path fill="#8fc7c9" d="M0 60h600v2H0zm0 8h600v2H0z"/>
+  <path fill="#c4e5da" d="M9 63h18v1H9zm56 5h26v1H65zm97-7h22v1h-22zm245 5h28v1h-28zm105-4h24v1h-24zm53 7h18v1h-18z"/>
+  <path fill="#5d8998" d="M8 52h20v3H8zm153 1h17v2h-17zm338-1h23v3h-23zm65 2h22v2h-22z"/>
+
+  <!-- Left cafe: a familiar street corner, not a fantasy game backdrop. -->
+  <path fill="#355967" d="M34 37h150v40H34z"/>
+  <path fill="#e2c2a2" d="M38 40h142v34H38z"/>
+  <path fill="#f0d9ba" d="M42 44h134v27H42z"/>
+  <path fill="#345e6b" d="M31 36h156v5H31z"/>
+  <path fill="#f4ac69" d="M38 43h142v5H38z"/>
+  <path fill="#f7e8cb" d="M46 43h10v5H46zm20 0h10v5H66zm20 0h10v5H86zm20 0h10v5h-10zm20 0h10v5h-10zm20 0h10v5h-10zm20 0h10v5h-10z"/>
+  <path fill="#355967" d="M51 51h74v23H51zm82 0h34v23h-34z"/>
+  <path fill="#6ca8ae" d="M55 54h66v16H55zm82 0h26v17h-26z"/>
+  <path fill="#b6d4c9" d="M57 55h6v15h-6zm24 0h3v15h-3zm37 0h3v15h-3zm22 0h3v17h-3z"/>
+  <path fill="#e2c2a2" d="M88 52h2v21h-2zm-34 11h70v2H54z"/>
+  <path fill="#c0774d" d="M67 65h30v3H67zm5-4h19v4H72z"/>
+  <path fill="#f3e5cf" d="M74 58h13v3H74z"/>
+  <path fill="#e7b674" d="M142 62h5v5h-5z"/>
+  <path fill="#294d5a" d="M165 57h4v9h-4z"/>
+  <path fill="#ecaa6b" d="M164 55h6v3h-6z"/>
+
+  <!-- Central studio: the visual anchor survives the narrow mobile crop. -->
+  <path fill="#2d5662" d="M207 19h188v58H207z"/>
+  <path fill="#f0d8b6" d="M212 23h178v51H212z"/>
+  <path fill="#e7c7a8" d="M212 29h178v2H212zm0 12h178v2H212zm0 31h178v2H212z"/>
+  <path fill="#244d5b" d="M202 17h198v6H202zm8-5h181v5H210z"/>
+  <path fill="#416f78" d="M216 14h24v3h-24zm127 0h41v3h-41z"/>
+  <path fill="#3b6975" d="M268 25h66v11h-66z"/>
+  <path fill="#f2c884" d="M277 29h5v4h-5zm8-2h5v6h-5zm8 3h5v3h-5zm11-3h5v6h-5zm8 3h5v3h-5zm11-2h4v5h-4z"/>
+  <path fill="#385d68" d="M223 38h163v7H223z"/>
+  <path fill="#f4a865" d="M226 39h160v5H226z"/>
+  <path fill="#f9e8c9" d="M236 39h10v5h-10zm20 0h10v5h-10zm20 0h10v5h-10zm20 0h10v5h-10zm20 0h10v5h-10zm20 0h10v5h-10zm20 0h10v5h-10zm20 0h10v5h-10z"/>
+  <path fill="#315a66" d="M225 46h59v28h-59zm66 0h23v29h-23zm29 0h60v28h-60z"/>
+  <path fill="#6aa9b0" d="M229 49h51v21h-51zm66 0h15v24h-15zm29 0h52v21h-52z"/>
+  <path fill="#a5d2ca" d="M232 50h6v20h-6zm22 0h3v20h-3zm23 0h3v20h-3zm49 0h5v20h-5zm27 0h3v20h-3zm20 0h3v20h-3z"/>
+  <path fill="#e9d7b6" d="M228 61h54v2h-54zm95 0h56v2h-56z"/>
+  <path fill="#365763" d="M300 51h2v21h-2z"/>
+  <path fill="#f3cf9d" d="M304 61h3v3h-3z"/>
+  <path fill="#d59c66" d="M240 64h23v2h-23zm92 1h19v2h-19z"/>
+  <path fill="#446f6a" d="M241 57h4v6h-4zm18 1h3v5h-3zm79-3h3v9h-3zm9 3h3v6h-3z"/>
+  <path fill="#e7ad66" d="M246 66h4v3h-4zm99 1h4v3h-4z"/>
+
+  <!-- A blue gallery at the other end of the block. -->
+  <path fill="#2d5663" d="M424 36h144v41H424z"/>
+  <path fill="#bed8cf" d="M429 40h134v34H429z"/>
+  <path fill="#d8e8d7" d="M433 44h126v26H433z"/>
+  <path fill="#396976" d="M419 34h154v6H419z"/>
+  <path fill="#efb578" d="M437 42h117v4H437z"/>
+  <path fill="#32606d" d="M442 49h78v25h-78zm85 0h25v25h-25z"/>
+  <path fill="#72aeb4" d="M446 52h70v18h-70zm85 0h17v19h-17z"/>
+  <path fill="#b4d8d0" d="M449 53h6v17h-6zm28 0h3v17h-3zm33 0h5v17h-5z"/>
+  <path fill="#efc68f" d="M472 56h21v3h-21zm6 3h10v7h-10z"/>
+  <path fill="#315a66" d="M459 69h43v2h-43z"/>
+
+  <!-- Lamps, planters and a bench give the NPCs a believable sidewalk. -->
+  <path fill="#365c67" d="M191 29h3v48h-3zm218-9h3v57h-3z"/>
+  <path fill="#365c67" d="M187 28h11v3h-11zm218-10h11v4h-11z"/>
+  <path fill="#ffe7ab" d="M189 31h7v5h-7zm218-8h7v5h-7z"/>
+  <path fill="#eecb8c" d="M186 36h13v2h-13zm218-8h13v2h-13z"/>
+  <path fill="#b7a996" d="M0 76h600v24H0z"/>
+  <path fill="#e4d6bb" d="M0 78h600v22H0z"/>
+  <path fill="#577a80" d="M0 75h600v3H0z"/>
+  <path fill="#f1e4c7" d="M0 84h600v2H0zM0 94h600v2H0z"/>
+  <path fill="#c8bca8" d="M0 94h600v1H0z"/>
+  <path fill="#c5b69e" d="M34 86h2v8h-2zm70 0h2v8h-2zm70 0h2v8h-2zm70 0h2v8h-2zm70 0h2v8h-2zm70 0h2v8h-2zm70 0h2v8h-2zm70 0h2v8h-2zm70 0h2v8h-2zM69 95h2v5h-2zm140 0h2v5h-2zm140 0h2v5h-2zm140 0h2v5h-2z"/>
+  <path fill="#8e9c80" d="M193 68h13v9h-13zm205-1h14v10h-14z"/>
+  <path fill="#b87d61" d="M192 74h16v5h-16zm205-1h17v6h-17z"/>
+  <path fill="#4d806b" d="M196 65h8v4h-8zm4-6h4v7h-4zm-3-4h3v8h-3zm202 6h12v7h-12zm2-6h3v9h-3zm5-5h3v12h-3z"/>
+  <path fill="#37666a" d="M405 77h35v3h-35zm4 3h3v8h-3zm24 0h3v8h-3z"/>
+  <path fill="#be8c6e" d="M408 74h32v3h-32z"/>
+  <path fill="#f6e9ce" d="M15 89h19v2H15zm109 0h21v2h-21zm218 0h21v2h-21zm204 0h20v2h-20z"/>
+</svg>

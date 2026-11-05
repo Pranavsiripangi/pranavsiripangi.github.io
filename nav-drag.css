@@ -1,0 +1,85 @@
+/* One movable glass marker for the three in-page desktop destinations. */
+.nav-section-glass,.nav-glass-grab{display:none}
+@media(min-width:900px){
+  .site-nav{position:relative;isolation:isolate}
+  .site-nav>a{position:relative;z-index:1;user-select:none;-webkit-user-select:none}
+  .site-nav .nav-section-glass{
+    position:absolute;z-index:0;left:0;top:0;display:block;width:0;height:42px;
+    border:1px solid rgba(255,255,255,.76);
+    border-radius:var(--glass-cap-left,999px) var(--glass-cap-right,999px) var(--glass-cap-right,999px) var(--glass-cap-left,999px) / 50%;
+    background:linear-gradient(145deg,rgba(255,255,255,.2),rgba(213,242,249,.08) 54%,rgba(255,255,255,.16));
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(71,129,151,.13),0 5px 13px rgba(0,0,0,.08);
+    -webkit-backdrop-filter:blur(6px) saturate(1.2);backdrop-filter:blur(6px) saturate(1.2);
+    opacity:0;pointer-events:none;will-change:transform;transition:opacity 180ms ease,box-shadow 260ms var(--ease-out);
+  }
+  .site-nav .nav-section-glass::before{
+    content:'';position:absolute;z-index:2;inset:1px;border-radius:inherit;pointer-events:none;
+    background:radial-gradient(ellipse 55% 80% at var(--glass-light-x,35%) var(--glass-light-y,18%),rgba(255,255,255,.4),rgba(255,255,255,.08) 38%,transparent 75%),linear-gradient(165deg,rgba(255,255,255,.34),transparent 42%,transparent 72%,rgba(255,255,255,.17));
+    opacity:calc(.55 + .3 * var(--glass-pressure,0));
+  }
+  .site-nav .nav-section-glass::after{content:'';position:absolute;z-index:2;inset:5px 5px 5px auto;width:13px;border-right:1px solid rgba(255,255,255,.7);border-radius:0 999px 999px 0;opacity:.55;pointer-events:none;transform:translateX(calc(var(--glass-refraction-x,0px) * -.2))}
+  .nav-glass-optics{display:none;position:absolute;inset:0;border-radius:inherit;clip-path:inset(0 round var(--glass-cap-left,999px) var(--glass-cap-right,999px) var(--glass-cap-right,999px) var(--glass-cap-left,999px) / 50%);pointer-events:none}
+  .site-nav.has-refractive-optics .nav-section-glass{z-index:2}
+  .has-refractive-optics .nav-glass-optics{display:block}
+  .nav-optic-scene{position:absolute;left:0;top:0;height:100%;pointer-events:none}
+  .nav-optic-word{position:absolute;display:flex;align-items:center;justify-content:center;color:#102738;white-space:nowrap;pointer-events:none}
+  .nav-glass-label{display:inline-block;line-height:1.2}
+  .has-refractive-optics .nav-optic-source{
+    -webkit-mask-image:linear-gradient(to right,#000 var(--glass-cut-left,0px),transparent var(--glass-cut-left,0px),transparent var(--glass-cut-right,0px),#000 var(--glass-cut-right,0px));
+    mask-image:linear-gradient(to right,#000 var(--glass-cut-left,0px),transparent var(--glass-cut-left,0px),transparent var(--glass-cut-right,0px),#000 var(--glass-cut-right,0px));
+  }
+  .nav-glass-rim{display:none;position:absolute;z-index:3;inset:-1px;border-radius:inherit;pointer-events:none}
+  .nav-glass-arrival{display:none;position:absolute;z-index:4;inset:-1px;border-radius:inherit;opacity:0;pointer-events:none}
+  @supports (mask-composite:exclude) or (-webkit-mask-composite:xor){
+    .nav-glass-arrival{
+      display:block;padding:1.5px;
+      background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.96) 48%,rgba(255,255,255,.96) 52%,transparent 60%);
+      background-size:300% 100%;background-position:100% 50%;
+      -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+      -webkit-mask-composite:xor;mask-composite:exclude;
+    }
+    .nav-glass-rim{
+      display:block;padding:1.5px;
+      background:conic-gradient(from var(--glass-rim-angle,140deg),rgba(255,255,255,.9),rgba(110,222,237,.48) 13%,rgba(152,149,238,.4) 19%,transparent 26%,transparent 43%,rgba(255,255,255,.86) 51%,rgba(235,192,137,.45) 58%,rgba(109,213,224,.4) 65%,transparent 74%,rgba(255,255,255,.9));
+      -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+      -webkit-mask-composite:xor;mask-composite:exclude;
+      opacity:calc(.4 + .55 * var(--glass-pressure,0));
+    }
+  }
+  .site-nav .nav-glass-grab{
+    position:absolute;z-index:3;left:0;top:0;display:block;width:0;height:42px;
+    border-radius:var(--glass-cap-left,999px) var(--glass-cap-right,999px) var(--glass-cap-right,999px) var(--glass-cap-left,999px) / 50%;opacity:0;pointer-events:none;touch-action:none;
+    cursor:grab;user-select:none;-webkit-user-select:none;
+  }
+  /* Engraved grip above the label, reading track below it. Neither covers the text. */
+  .nav-glass-grab::before{content:'';position:absolute;left:50%;top:5px;width:6px;height:5px;transform:translateX(-50%);background:linear-gradient(#234858 0 0) left center/1px 5px no-repeat,linear-gradient(#234858 0 0) right center/1px 5px no-repeat;opacity:.55;transition:opacity 180ms ease,translate 260ms var(--ease-out);pointer-events:none}
+  .site-nav:is(.is-grab-hover,.is-grabbing,.is-dragging) .nav-glass-grab::before{opacity:.95;translate:0 -1px}
+  .nav-section-progress{position:absolute;z-index:3;left:18px;right:18px;bottom:5px;height:2px;border-radius:2px;background:rgba(21,44,62,.15);overflow:hidden;pointer-events:none;transition:opacity 180ms ease}
+  .nav-section-progress::before{content:'';position:absolute;inset:0;border-radius:inherit;background:#234858;transform:scaleX(var(--section-progress,0));transform-origin:left center}
+  .site-nav.is-dragging .nav-section-progress{opacity:0}
+  .site-nav.has-glass-indicator .nav-section-glass.is-visible{opacity:1}
+  .site-nav.has-glass-indicator .nav-glass-grab.is-visible{opacity:1;pointer-events:auto}
+  .site-nav.has-glass-indicator>a[aria-current]:not(:last-child){background:transparent;border-color:transparent;box-shadow:none;text-decoration:none;color:#102738}
+  .site-nav:is(.is-grab-hover,.is-grabbing) .nav-section-glass{box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(71,129,151,.16),0 7px 16px rgba(0,0,0,.11)}
+  .site-nav:is(.is-grabbing,.is-dragging) .nav-glass-grab{cursor:grabbing}
+  .site-nav.is-dragging>a.is-glass-preview{color:#0e3145}
+  .site-nav.is-dragging .nav-section-glass{box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(71,129,151,.16),0 8px 18px rgba(0,0,0,.13)}
+}
+@media(min-width:900px) and (prefers-reduced-transparency:reduce),
+       (min-width:900px) and (forced-colors:active){
+  .site-nav .nav-section-glass{background:#e8f4f7;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .site-nav .nav-glass-rim,.site-nav .nav-glass-optics,.site-nav .nav-glass-arrival{display:none}
+  .site-nav .nav-optic-source{-webkit-mask-image:none;mask-image:none}
+}
+@media(min-width:900px) and (forced-colors:active){
+  .site-nav .nav-section-glass{border:2px solid Highlight;background:Canvas;box-shadow:none}
+  .site-nav .nav-section-glass::before,.site-nav .nav-section-glass::after{display:none}
+  .nav-glass-grab::before{background:linear-gradient(CanvasText 0 0) left center/1px 5px no-repeat,linear-gradient(CanvasText 0 0) right center/1px 5px no-repeat;opacity:1}
+  .nav-section-progress{background:CanvasText}.nav-section-progress::before{background:Highlight}
+  .site-nav.has-glass-indicator>a[aria-current]:not(:last-child){color:CanvasText}
+}
+@media(prefers-reduced-motion:reduce){
+  .site-nav .nav-section-glass,.nav-glass-grab::before,.nav-section-progress{transition:none;will-change:auto}
+  .site-nav .nav-glass-optics,.site-nav .nav-glass-rim,.site-nav .nav-glass-arrival{display:none}
+  .site-nav .nav-optic-source{-webkit-mask-image:none;mask-image:none}
+}

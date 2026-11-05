@@ -1,0 +1,64 @@
+/* The contact atlas belongs to the same water world as the portfolio. */
+.contact-intro{grid-template-columns:minmax(0,1.55fr) minmax(270px,.65fr);align-items:end}
+.contact-intro h1{font-size:clamp(48px,6vw,92px);line-height:.97}
+.contact-intro-aside{border-left-color:rgba(21,44,62,.25)}
+.atlas-panel{color:#ebf6f4;border-color:rgba(224,247,248,.4);border-radius:clamp(24px,2.8vw,40px);background:linear-gradient(145deg,rgba(21,62,78,.91),rgba(8,37,54,.96) 75%);box-shadow:0 24px 58px rgba(0,0,0,.19)}
+.atlas-panel .map-panel-head{padding:clamp(24px,2.7vw,38px) clamp(24px,3vw,44px) 1.25rem}
+.atlas-panel .map-panel-head h2{margin:0;font-size:clamp(30px,3.8vw,58px);line-height:1.02;color:#f2faf8}
+.atlas-panel .map-panel-head>p{max-width:19ch;color:#d4e8e9;text-align:right}
+.atlas-toolbar{padding:.625rem clamp(18px,3vw,44px);border-color:rgba(215,239,241,.23)}
+.atlas-view-controls button{border-radius:999px;color:#d1e6e7}
+.atlas-view-controls button[aria-pressed=true]{background:#deefed;color:#173947;box-shadow:0 5px 16px rgba(0,0,0,.13)}
+.atlas-view-controls button:hover:not([aria-pressed=true]){background:rgba(225,246,246,.14);color:#fff}
+.atlas-scale{color:#a9d0d3}
+.atlas-viewport{margin:0 clamp(12px,2vw,30px);border:1px solid rgba(224,246,247,.14);border-radius:clamp(16px,2vw,26px);background:#164252 url('assets/water-caustics.jpg') center/cover}
+.atlas-viewport::before{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(110deg,rgba(9,39,54,.61),rgba(10,47,61,.78));pointer-events:none}
+.atlas-panel.atlas-ready .atlas-viewport{aspect-ratio:2}
+.atlas-panel .atlas-detail{padding:clamp(18px,2vw,28px) clamp(20px,3vw,44px)}
+.atlas-detail .detail-head,.atlas-detail .detail-bottom{position:relative;z-index:3;color:#c6e4e5;font-size:12px;letter-spacing:.03em}
+.atlas-panel.atlas-ready .atlas-detail .java-map{width:min(82%,60rem);margin:auto;aspect-ratio:2}
+.atlas-detail .java-map img{filter:brightness(1.8) saturate(.67) drop-shadow(0 12px 6px rgba(0,0,0,.32))}
+.atlas-detail .city-connection-base{stroke:#cce7e5}
+.atlas-detail .city-connection-active{stroke:#e6a675}
+.atlas-panel .archipelago{filter:brightness(1.7) saturate(.7) drop-shadow(0 6px 2px rgba(0,0,0,.17))}
+.atlas-panel .map-stage:is(:hover,:focus-within) .archipelago{filter:brightness(1.7) saturate(.7) drop-shadow(0 11px 5px rgba(0,0,0,.28))}
+.atlas-panel .map-island-label{color:#e2f2ee;text-shadow:0 2px 6px rgba(0,0,0,.6)}
+.atlas-panel .map-coordinate{color:#c7e3e2}
+.atlas-panel .map-stage::before{border-color:rgba(220,245,245,.19)}
+.atlas-island:is(:hover,:focus-visible) .atlas-island-hit,.atlas-island.is-selected .atlas-island-hit{fill:rgba(239,166,116,.32);stroke:#f5e4cf}
+.atlas-island:focus-visible .atlas-island-hit,.atlas-island.is-selected:focus-visible .atlas-island-hit{stroke:#fff}
+.atlas-panel .map-panel-foot{padding:.9rem clamp(24px,3vw,44px);color:#c4e1e2}
+.island-choices{display:flex;flex-wrap:wrap;gap:.5rem;padding:0 clamp(24px,3vw,44px) 1.2rem}
+.atlas-panel[data-map-view=detail] .island-choices{display:none}
+.island-choices button{min-height:44px;padding:.45rem .9rem;border:1px solid rgba(221,246,246,.33);border-radius:999px;background:transparent;color:#e4f2ef;font:600 .875rem/1.2 var(--sans);transition:background-color 200ms ease,color 200ms ease}
+.island-choices button:hover,.island-choices button[aria-pressed=true]{background:#e1f0ed;color:#183b49}
+.atlas-panel .atlas-location-note{grid-template-columns:minmax(160px,.6fr) minmax(0,1.4fr);align-items:center;margin:0 clamp(24px,3vw,44px);padding:1.4rem 12px;border-color:rgba(221,246,246,.22)}
+.atlas-location-title .city-card-eyebrow{color:#f0b688}
+.atlas-location-title h3{color:#f4fbf8}
+.atlas-location-copy .city-card-coordinates{color:#b6d6d9}
+.atlas-location-copy>p{color:#e1eff0}
+.atlas-location-controls{margin:0 clamp(24px,3vw,44px);border-color:rgba(221,246,246,.22)}
+.atlas-panel[data-map-view=overview] .atlas-location-controls{display:none}
+.atlas-location-controls>span{color:#cee6e5}
+.atlas-location-controls .city-choice{border-color:rgba(221,246,246,.33);color:#e4f2ef;border-radius:999px}
+.atlas-location-controls .city-choice.is-active{background:#e1f0ed;color:#183b49}
+.atlas-corner{border-color:#d5e9e5}
+.atlas-panel .region-tag{background:#eff7f2;color:#183b49}
+.atlas-panel .region-ring{box-shadow:0 0 0 6px rgba(255,255,255,.12)}
+.hero-summary small{display:inline-block;margin-top:.7rem;font:500 11px/1.45 var(--mono);letter-spacing:.01em}
+@media(max-width:900px){.atlas-panel.atlas-ready .atlas-viewport{aspect-ratio:2}}
+@media(max-width:700px){
+  .contact-intro{grid-template-columns:1fr}
+  .contact-intro h1{font-size:clamp(44px,10vw,68px)}
+  .atlas-panel .map-panel-head{padding:1.4rem 1.25rem 1rem}
+  .atlas-panel .map-panel-head>p{margin:.75rem 0 0;text-align:left}
+  .atlas-panel.atlas-ready .atlas-viewport{aspect-ratio:1.5}
+  .atlas-panel.atlas-ready .atlas-detail .java-map{width:98%}
+  .atlas-panel .atlas-detail{padding:.8rem}
+  .atlas-panel .atlas-location-note{grid-template-columns:1fr;gap:.65rem;margin:0 1.25rem;padding:1.2rem 12px}
+  .atlas-panel .map-panel-foot{padding:.8rem 1.25rem}
+  .island-choices{padding:0 1.25rem 1rem}
+  .atlas-location-controls{margin:0 1.25rem}
+}
+@media(prefers-reduced-transparency:reduce){.atlas-panel{background:#12384b}.atlas-viewport{background:#164252}}
+@media(forced-colors:active){.atlas-panel,.atlas-viewport{background:Canvas;color:CanvasText}.atlas-panel .map-panel-head h2,.atlas-panel .map-panel-head>p,.atlas-location-title h3,.atlas-location-copy>p,.atlas-location-controls>span,.atlas-panel .map-panel-foot{color:CanvasText}}

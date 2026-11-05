@@ -1,0 +1,96 @@
+/* Quiet editorial reading pages for the three independent concepts. */
+body.case-page{background:#bce4ed}
+.case-page main,.case-page footer{position:relative;z-index:1}
+.case-page::before,.case-page::after{animation:none}
+.case-header{position:sticky;top:16px;z-index:80;display:flex;align-items:center;justify-content:space-between;gap:18px;width:min(calc(100% - 32px),1232px);min-height:66px;margin:16px auto 0;padding:9px clamp(18px,3vw,36px);border:1px solid rgba(255,255,255,.8);border-radius:999px;background:rgba(242,250,250,.63);-webkit-backdrop-filter:blur(18px) saturate(1.12);backdrop-filter:blur(18px) saturate(1.12);box-shadow:0 10px 36px rgba(0,0,0,.1)}
+.case-brand{display:inline-flex;align-items:center;min-height:44px;font-weight:800;letter-spacing:-.035em;text-decoration:none;font-size:18px}
+.case-header nav{display:flex;align-items:center;gap:clamp(16px,2vw,30px)}
+.case-header nav a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:700;text-decoration:none}
+.case-header nav a:last-child{padding:8px 16px;border-radius:999px;background:var(--ink);color:white}
+.case-hero{padding-top:clamp(40px,4vw,64px);padding-bottom:32px}
+.case-kicker,.case-index,.case-section-label,.case-chip,.case-image figcaption,.case-honesty,.case-next-index{font:500 12px/1.5 var(--mono);letter-spacing:.035em;text-transform:uppercase}
+.case-kicker{display:flex;align-items:center;gap:10px;color:#25495a}
+.case-kicker::before{content:'';width:9px;height:9px;background:var(--orange)}
+.case-hero-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.55fr);align-items:end;gap:clamp(36px,7vw,120px);margin-top:25px}
+.case-hero h1{margin:0;font-size:clamp(56px,7vw,112px);line-height:.87;letter-spacing:-.055em}
+.case-hero p{max-width:35ch;margin:0 0 5px;font-size:clamp(18px,1.5vw,22px);line-height:1.35}
+.case-meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.case-chip{padding:9px 13px;border:1px solid rgba(21,44,62,.28);border-radius:999px;background:rgba(255,255,255,.35)}
+.case-chip:first-child{background:#152c3e;color:white;border-color:#152c3e}
+.case-image{margin-top:12px;max-width:70rem;width:100%;width:min(100%,calc(min(102.4svh,57.6rem) + 2 * var(--gutter)))}
+.case-image-wrap{overflow:hidden;border:1px solid rgba(255,255,255,.6);border-radius:clamp(22px,3vw,42px);background:#132235;box-shadow:0 20px 65px rgba(0,0,0,.18)}
+.case-image img{display:block;width:100%;height:auto;aspect-ratio:1.6;object-fit:cover}
+.case-image figcaption{display:flex;justify-content:space-between;gap:20px;margin-top:12px;color:#365768}
+.case-page .case-image figcaption span:last-child{text-align:right}
+.case-story{display:grid;grid-template-columns:minmax(180px,.5fr) minmax(0,1.5fr);gap:clamp(30px,6vw,110px);margin-top:clamp(40px,4vw,64px);padding-block:clamp(28px,3vw,44px);border-top:1px solid rgba(21,44,62,.35)}
+.case-section-label{color:var(--orange)}
+.case-story h2{max-width:18ch;margin:0;font-size:clamp(32px,3.5vw,52px);line-height:1.04;letter-spacing:-.055em}
+.case-story p{max-width:64ch;margin:24px 0 0;color:#2d4c5d;font-size:clamp(17px,1.3vw,20px);line-height:1.55}
+.case-decision-band{position:relative;z-index:1;margin-top:clamp(25px,4vw,55px);padding-block:clamp(40px,4vw,64px);background:#edf6f5}
+.case-decision-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;padding-bottom:26px;border-bottom:1px solid rgba(21,44,62,.24)}
+.case-decision-heading h2{max-width:15ch;margin:12px 0 0;font-size:clamp(32px,3.5vw,52px);line-height:1.02;letter-spacing:-.05em}
+.case-decision-heading p{max-width:31ch;margin:0;color:#496270;font-size:16px}
+.case-decisions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,48px);list-style:none;margin:0;padding:0}
+/* Exactly four decisions read as a 2×2 block instead of three plus one stranded item. */
+@media(min-width:851px){.case-decisions:has(>li:nth-child(4)):not(:has(>li:nth-child(5))){grid-template-columns:repeat(2,minmax(0,1fr))}}
+.case-decisions li{padding:32px 0 0}
+.case-decisions li>span{font:500 12px var(--mono);color:var(--orange)}
+.case-decisions h3{margin:26px 0 12px;font-size:clamp(23px,2.5vw,34px);line-height:1.1;letter-spacing:-.035em}
+.case-decisions p{max-width:36ch;margin:0;color:#3e5b68;font-size:16px;line-height:1.5}
+.case-check{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(35px,6vw,90px);margin-top:clamp(40px,4vw,64px);margin-bottom:clamp(40px,4vw,64px);padding:clamp(24px,2.5vw,36px);border:1px solid rgba(255,255,255,.8);border-radius:clamp(24px,3vw,42px);background:rgba(246,252,251,.79);box-shadow:0 17px 45px rgba(0,0,0,.09);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+.case-check h2{max-width:18ch;margin:16px 0 0;font-size:clamp(30px,3vw,44px);line-height:1.08;letter-spacing:-.05em}
+.case-check p,.case-check li{color:#365360;font-size:17px;line-height:1.55}
+.case-check p{margin:0 0 22px}
+.case-check ul{margin:0;padding-left:20px}
+.case-check li+li{margin-top:9px}
+.case-honesty{display:block;margin-top:22px;color:#7d3c27;line-height:1.5}
+.case-bottom{position:relative;z-index:1;padding-block:clamp(40px,4vw,64px);background:var(--ink);color:#e9f5f6}
+.case-bottom .case-section-label{color:#ffc1a8}
+.case-bottom-inner{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.case-bottom h2{margin:12px 0 24px;font-size:clamp(32px,3.5vw,52px);line-height:1.04;letter-spacing:-.05em}
+.case-bottom a{display:inline-flex;align-items:center;min-height:46px;border-bottom:1px solid currentColor;font-weight:700;text-decoration:none}
+.case-bottom-next{align-self:end;justify-self:end;text-align:right}
+.case-bottom-next span{display:block;color:#a9ced2}
+.case-bottom-next a{font-size:clamp(24px,3vw,42px)}
+.case-page-footer{position:relative;z-index:1;display:flex;justify-content:space-between;gap:20px;width:100%;max-width:none;padding-top:21px;padding-bottom:28px;background:var(--ink);color:#c2dbe1;border-top:1px solid rgba(255,255,255,.2);font:12px var(--mono)}
+/* Slots for real project pages (see case-template.html). All reuse the tokens above. */
+/* Facts row: Role / Stack / Timeline / Status under the hero chips. */
+.case-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:32px 0 0;border-top:1px solid var(--line)}
+.case-facts>div{min-width:0;padding:16px 20px 0 0}
+.case-facts>div+div{padding-left:20px;border-left:1px solid var(--line)}
+.case-facts dt{font:500 12px/1.5 var(--mono);letter-spacing:.035em;text-transform:uppercase;color:var(--orange)}
+.case-facts dd{margin:8px 0 0;color:#203e50;font-size:16px;line-height:1.45;overflow-wrap:anywhere}
+/* Links: demo, guide, source. The first one is the primary action. */
+.case-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.case-links a{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:9px 18px;border:1px solid var(--ink);border-radius:999px;font-size:15px;font-weight:700;text-decoration:none}
+.case-links a:first-child{background:var(--ink);color:white}
+.case-links a:hover{border-color:var(--orange);color:var(--orange)}.case-links a:first-child:hover{background:var(--orange);color:white}
+.case-links a:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+/* Gallery: every frame keeps the 1.6 ratio of the hero image, so mixed screenshots stay aligned.
+   Portrait (phone) shots sit centered on a matte inside the same frame instead of being cropped. */
+.case-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,28px);margin:28px 0 0;padding:0;list-style:none}
+.case-gallery>:last-child:nth-child(odd){grid-column:1/-1}
+.case-gallery figure{margin:0;min-width:0}
+.case-gallery img{display:block;width:100%;height:auto;aspect-ratio:1.6;object-fit:cover;object-position:top;border:1px solid rgba(255,255,255,.6);border-radius:clamp(14px,1.6vw,22px);background:#132235;box-shadow:0 12px 34px rgba(0,0,0,.13)}
+.case-gallery .case-shot--portrait img{object-fit:contain;object-position:center;background:#dcecef}
+.case-gallery figcaption{margin-top:10px;color:#365768;font-size:15px;line-height:1.45}
+/* Results table: numbers align on the right and never wrap. */
+.case-table-wrap{margin-top:24px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.case-table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.45}
+.case-table th{padding:0 16px 12px 0;border-bottom:1px solid rgba(21,44,62,.45);color:var(--orange);font:500 12px/1.5 var(--mono);letter-spacing:.035em;text-transform:uppercase;text-align:left;vertical-align:bottom}
+/* Let the content column shrink so a wide table scrolls inside its wrapper, never the page. */
+.case-story>div{min-width:0}
+.case-table td{padding:14px 16px 14px 0;border-bottom:1px solid rgba(21,44,62,.15);color:#203e50;vertical-align:top}
+.case-table .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;padding-right:0}
+.case-table-note,.case-story .case-table-note{margin:12px 0 0;color:#496270;font-size:14px}
+/* Quote from the PRD or brief: short, labelled, and visibly not the author's own words. */
+.case-quote{margin:24px 0 0;padding:16px 20px;border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:rgba(255,255,255,.45)}
+.case-quote-label{display:block;color:var(--orange);font:500 12px/1.5 var(--mono);letter-spacing:.035em;text-transform:uppercase}
+.case-quote p{margin:8px 0 0;color:#203e50;font-size:17px;line-height:1.5}
+.case-story .case-quote p{margin-top:8px}
+@media(max-width:850px){.case-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.case-facts>div:nth-child(odd){padding-left:0;border-left:0}.case-facts>div:nth-child(n+3){margin-top:16px;border-top:1px solid var(--line)}}
+@media(max-width:600px){.case-facts{grid-template-columns:1fr}.case-facts>div,.case-facts>div+div{padding:14px 0 0;border-left:0}.case-facts>div+div{margin-top:16px;border-top:1px solid var(--line)}.case-gallery{grid-template-columns:1fr}.case-gallery>:last-child:nth-child(odd){grid-column:auto}.case-links a{flex:1 1 auto;justify-content:center}.case-table{font-size:15px}}
+@media(max-width:850px){.case-hero-row,.case-story,.case-check{grid-template-columns:1fr}.case-hero p{max-width:45ch}.case-decisions{grid-template-columns:1fr}.case-decisions li{display:grid;grid-template-columns:45px 1fr;gap:0 22px;padding:24px 0;border-bottom:1px solid rgba(21,44,62,.15)}.case-decisions h3{margin:0 0 10px}.case-decisions p{grid-column:2}.case-decision-heading{align-items:start;flex-direction:column}.case-check{gap:30px}}
+@media(max-width:600px){.case-header{min-height:58px;flex-wrap:wrap;gap:8px;top:10px;margin-top:10px;padding:8px 16px}.case-brand{font-size:15px}.case-header nav{width:100%;justify-content:space-between;gap:12px}.case-header nav a{display:inline-flex;align-items:center;min-height:44px;font-size:14px}.case-header nav a:nth-child(2){display:none}.case-hero{padding-top:62px}.case-hero h1{font-size:clamp(52px,14vw,80px)}.case-hero-row{gap:28px}.case-meta{margin-top:28px}.case-chip{font-size:11px}.case-image img{aspect-ratio:1.6}.case-image figcaption{font-size:11px}.case-bottom-inner{grid-template-columns:1fr}.case-bottom-next{justify-self:start;text-align:left}.case-page-footer{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.case-page::before,.case-page::after{animation:none!important}}
+@media(prefers-reduced-transparency:reduce),(forced-colors:active){.case-header,.case-check{background:#edf6f5;-webkit-backdrop-filter:none;backdrop-filter:none}}

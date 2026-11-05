@@ -1,0 +1,108 @@
+/* Original underwater caustics keep the open sections connected. */
+:root{--nav-glass-alpha:.4}
+html{background:#a9d7e5}
+body{position:relative;background:transparent}
+body::before{
+  content:'';
+  position:fixed;
+  inset:-10%;
+  z-index:0;
+  pointer-events:none;
+  background-color:#a9d7e5;
+  background-image:linear-gradient(rgba(221,243,248,.39),rgba(221,243,248,.39)),url('assets/water-caustics.jpg');
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  translate:0 var(--water-scroll-far,0px);
+  animation:water-current 16s cubic-bezier(.45,0,.55,1) infinite alternate;
+}
+body::after{
+  content:'';
+  position:fixed;
+  inset:-12%;
+  z-index:0;
+  pointer-events:none;
+  background-image:radial-gradient(ellipse 55% 66% at 16% 20%,rgba(255,255,255,.5),transparent 74%),url('assets/water-caustics.jpg');
+  background-position:center;
+  background-size:100% 100%,cover;
+  background-repeat:no-repeat;
+  opacity:.22;
+  mix-blend-mode:screen;
+  translate:0 var(--water-scroll-near,0px);
+  animation:water-light-drift 11s ease-in-out infinite alternate;
+}
+/* The water arrives before the circular navigation seed. Its current keeps moving. */
+.nav-intro-running body::before{animation:water-current 16s cubic-bezier(.45,0,.55,1) infinite alternate,water-arrive 280ms ease-out both}
+@keyframes water-arrive{from{opacity:0}to{opacity:1}}
+@keyframes water-current{
+  0%{transform:translate3d(calc(-4% * var(--water-drift-factor,1)),calc(-2% * var(--water-drift-factor,1)),0) scale(1.055)}
+  50%{transform:translate3d(0,calc(1% * var(--water-drift-factor,1)),0) scale(calc(1.055 + .045 * var(--water-drift-factor,1)))}
+  100%{transform:translate3d(calc(4% * var(--water-drift-factor,1)),calc(3% * var(--water-drift-factor,1)),0) scale(calc(1.055 + .085 * var(--water-drift-factor,1)))}
+}
+@keyframes water-light-drift{
+  0%{transform:translate3d(calc(5% * var(--water-drift-factor,1)),calc(-3% * var(--water-drift-factor,1)),0) scale(1.06);opacity:.12}
+  50%{transform:translate3d(0,calc(2% * var(--water-drift-factor,1)),0) scale(calc(1.06 + .05 * var(--water-drift-factor,1)));opacity:.26}
+  100%{transform:translate3d(calc(-5% * var(--water-drift-factor,1)),calc(4% * var(--water-drift-factor,1)),0) scale(calc(1.06 + .10 * var(--water-drift-factor,1)));opacity:.18}
+}
+@keyframes water-current-mobile{
+  from{transform:translate3d(-2.5%,-1.5%,0) scale(1.05)}
+  to{transform:translate3d(2.5%,2%,0) scale(1.09)}
+}
+body>main{position:relative;z-index:1}
+.site-header{background:rgba(235,249,250,var(--nav-glass-alpha));color:#050d12;-webkit-backdrop-filter:blur(4px) saturate(1.12);backdrop-filter:blur(4px) saturate(1.12);transition:background-color 220ms ease,border-color 220ms ease,box-shadow 220ms ease,-webkit-backdrop-filter 420ms cubic-bezier(.22,1,.36,1),backdrop-filter 420ms cubic-bezier(.22,1,.36,1)}
+.site-header.is-scrolled{background:rgba(235,249,250,var(--nav-glass-alpha));-webkit-backdrop-filter:blur(8px) saturate(1.16);backdrop-filter:blur(8px) saturate(1.16)}
+.site-header.is-scrolling{background:rgba(235,249,250,var(--nav-glass-alpha));-webkit-backdrop-filter:blur(18px) saturate(1.24);backdrop-filter:blur(18px) saturate(1.24);transition-duration:220ms,220ms,220ms,180ms,180ms}
+.nav-lens{position:absolute;inset:0;z-index:0;overflow:hidden;border-radius:inherit;pointer-events:none}
+.nav-glint{position:absolute;left:0;top:-75%;width:34%;height:250%;border-radius:50%;background:radial-gradient(ellipse,rgba(255,255,255,.42),rgba(255,255,255,.1) 40%,transparent 73%);filter:blur(7px);opacity:.14;transform:translate3d(110%,0,0);will-change:transform,opacity}
+.nav-lens::after{content:'';position:absolute;inset:1px;border-radius:inherit;box-shadow:inset 0 1px 0 rgba(255,255,255,.92),inset 0 -1px 0 rgba(69,136,162,.18)}
+.site-header.glass-pressed .nav-lens::after{box-shadow:inset 0 2px 3px rgba(255,255,255,.96),inset 0 -2px 3px rgba(52,118,142,.24)}
+.mobile-menu.open{z-index:2;background:rgba(235,249,250,var(--nav-glass-alpha));-webkit-backdrop-filter:blur(6px) saturate(1.16);backdrop-filter:blur(6px) saturate(1.16)}
+.site-nav a[aria-current]{color:#050d12;text-decoration:underline;text-decoration-color:var(--orange);text-decoration-thickness:2px;text-underline-offset:7px}
+.hero,.work,.about,.services,.process,.faq{background:transparent}
+.work .project-number{color:var(--ink)}
+body :is(a,button,summary):focus-visible{outline-color:var(--ink)}
+.contact :is(a,button):focus-visible{outline-color:var(--ink)}
+
+/* Bright reading surfaces leave the water visible around the work. */
+.about>.page-width,.faq>.page-width{
+  width:min(calc(100% - 2 * var(--gutter)),var(--content-max));
+  padding:clamp(24px,2.5vw,36px);
+  border:1px solid rgba(255,255,255,.82);
+  border-radius:24px;
+  background:rgba(255,255,255,.87);
+  box-shadow:0 20px 54px rgba(0,0,0,.1);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
+}
+.about>.page-width{background:rgba(255,255,255,.9)}
+.services .service-list{border-top:0}
+.services .service-row{
+  padding:clamp(18px,1.4vw,22px);
+  margin-bottom:16px;
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:20px;
+  background:rgba(255,255,255,.9);
+  box-shadow:0 14px 38px rgba(0,0,0,.09);
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+}
+.services .service-row:last-child{margin-bottom:0}
+.contact{position:relative;z-index:1;width:min(calc(100% - 2 * clamp(16px,3.5vw,56px)),var(--content-max));margin:clamp(24px,3vw,40px) auto 24px;overflow:hidden;border:1px solid rgba(255,255,255,.72);border-radius:clamp(34px,4vw,56px);background:linear-gradient(180deg,rgba(230,247,250,.42),rgba(155,216,231,.55));box-shadow:0 22px 60px rgba(0,0,0,.12),inset 0 1px 0 rgba(255,255,255,.72);color:var(--ink)}
+@media(max-width:700px){.contact{width:calc(100% - 28px);margin:28px auto 14px;border-radius:34px}}
+
+@media(max-width:700px){
+  body::before{background-image:linear-gradient(rgba(231,247,250,.49),rgba(231,247,250,.49)),url('assets/water-caustics.jpg');background-position:56% center;animation:water-current-mobile 18s ease-in-out infinite alternate}
+  .nav-intro-running body::before{animation:water-current-mobile 18s ease-in-out infinite alternate,water-arrive 280ms ease-out both}
+  body::after{display:none}
+  .about>.page-width,.faq>.page-width{padding:26px 22px;border-radius:17px}
+  .services .service-row{padding:22px 20px;border-radius:16px}
+}
+@media(prefers-reduced-motion:reduce){body::before,body::after{animation:none;transform:none;translate:none}.nav-glint{display:none}}
+@media(prefers-reduced-transparency:reduce){
+  .site-header,.site-header.is-scrolled,.site-header.is-scrolling{background:#eef7fc;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .nav-glint{display:none}
+  .mobile-menu.open{background:#eef7fc;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .about>.page-width,.faq>.page-width,.services .service-row{background:#f7fafb;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .contact{background:#cde9ef}
+}
+@media(forced-colors:active){body::before,body::after,.nav-lens{display:none}}

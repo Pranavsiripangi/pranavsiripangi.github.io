@@ -1,0 +1,21 @@
+/* Interactive typography and native custom cursor; independent of page layout. */
+.hero-type{position:relative;width:100%;isolation:isolate;overflow:clip;overflow-clip-margin:20px}
+.hero-type h1{height:100%;margin:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:.04em;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-weight:400;font-size:clamp(70px,9vw,142px);line-height:.94;letter-spacing:0;text-shadow:none}
+.hero-line{display:block;white-space:nowrap;color:var(--ink)}
+#heroParticles{position:absolute;inset:0;width:100%;height:100%;display:none;pointer-events:none}
+.hero-type.is-particle-ready #heroParticles{display:block}.hero-type.is-particle-ready h1{opacity:0}
+.hero-handoff{position:fixed;inset:0;z-index:70;width:100vw;height:100vh;pointer-events:none;opacity:0;visibility:hidden;contain:strict}
+.hero-handoff.is-active{opacity:1;visibility:visible}
+.type-hint{position:absolute;right:0;bottom:0;display:none;color:#314d64;font:11px/1.4 var(--mono);letter-spacing:.035em}.hero-type.is-particle-ready .type-hint{display:block}
+.pointer-cursor{position:fixed;left:0;top:0;z-index:120;pointer-events:none;display:none;visibility:hidden;transform:translate3d(-100px,-100px,0);background:#236daa;border-radius:0 5px 5px 5px;padding:5px 9px;color:#fff;font:12px/1.25 var(--mono);transition:background-color 160ms;will-change:transform}
+html.canvas-cursor,html.canvas-cursor body,html.canvas-cursor a,html.canvas-cursor button,html.canvas-cursor summary{cursor:url('assets/cursor-blue.svg') 3 2,auto}
+html.canvas-cursor .pointer-cursor{display:block}html.canvas-cursor .pointer-cursor.is-visible{visibility:visible}.pointer-cursor[data-state="View"]{background:var(--ink);border-radius:30px}body:has(dialog[open]) .pointer-cursor{visibility:hidden!important}
+.wave-word{display:inline-block;white-space:nowrap}.wave-letter{display:inline-block;transform-origin:50% 85%;transition:transform 360ms var(--ease-out)}
+.nav-intro-running .hero-type{animation:hero-type-enter 760ms 1450ms var(--ease-out) both}
+.nav-intro-running .type-hint{animation:hint-in 350ms 2240ms ease both}
+@keyframes hero-type-enter{from{opacity:0;transform:translate3d(-64px,12px,0) scale(.985)}to{opacity:1;transform:none}}
+@keyframes hint-in{from{opacity:0}to{opacity:1}}
+@media(max-width:1000px) and (min-width:701px){.hero-type h1{font-size:10.4vw}}
+@media(max-width:700px){.hero-type h1{font-size:18vw}.type-hint{font-size:11px}}
+@media(pointer:coarse),(hover:none){.type-hint,.pointer-cursor{display:none!important}}
+@media(prefers-reduced-motion:reduce){.hero-type.is-particle-ready #heroParticles,.hero-handoff,.type-hint,.pointer-cursor{display:none!important}.hero-type.is-particle-ready h1{opacity:1}.wave-letter{transform:none!important}.nav-intro-running .hero-type,.nav-intro-running .type-hint{opacity:1;transform:none;animation:none!important}}
